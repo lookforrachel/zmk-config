@@ -11,32 +11,32 @@
         compatible = "zmk,combos";
 
         u_combo_fun {
-            bindings = <&u_to_U_FUN>;
+            bindings = <&to 9>;
             key-positions = <0 1>;
         };
 
         u_combo_num {
-            bindings = <&u_to_U_NUM>;
+            bindings = <&to 7>;
             key-positions = <12 13>;
         };
 
         u_combo_sym {
-            bindings = <&u_to_U_SYM>;
+            bindings = <&to 8>;
             key-positions = <24 25>;
         };
 
         u_combo_base {
-            bindings = <&u_to_U_BASE>;
+            bindings = <&to 0>;
             key-positions = <10 11>;
         };
 
         u_combo_nav {
-            bindings = <&u_to_U_NAV>;
+            bindings = <&to 4>;
             key-positions = <22 23>;
         };
 
         u_combo_media {
-            bindings = <&u_to_U_MEDIA>;
+            bindings = <&to 6>;
             key-positions = <35 34>;
         };
 
@@ -46,7 +46,7 @@
         };
 
         u_combo_extra {
-            bindings = <&u_to_U_EXTRA>;
+            bindings = <&to 1>;
             key-positions = <11 23>;
         };
     };
