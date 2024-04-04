@@ -11,32 +11,32 @@
         compatible = "zmk,combos";
 
         u_combo_fun {
-            bindings = <&to 9>;
+            bindings = <&to 7>;
             key-positions = <0 1>;
         };
 
         u_combo_num {
-            bindings = <&to 7>;
+            bindings = <&to 5>;
             key-positions = <12 13>;
         };
 
         u_combo_sym {
-            bindings = <&to 8>;
+            bindings = <&to 6>;
             key-positions = <24 25>;
         };
 
         u_combo_base {
-            bindings = <&to 0>;
+            bindings = <&to 9>;
             key-positions = <10 11>;
         };
 
         u_combo_nav {
-            bindings = <&to 4>;
+            bindings = <&to 2>;
             key-positions = <22 23>;
         };
 
         u_combo_media {
-            bindings = <&to 6>;
+            bindings = <&to 4>;
             key-positions = <35 34>;
         };
 
@@ -46,7 +46,7 @@
         };
 
         u_combo_extra {
-            bindings = <&to 1>;
+            bindings = <&to 0>;
             key-positions = <11 23>;
         };
 
@@ -74,33 +74,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        BASE {
-            label = "Base";
-            bindings = <
-&u_mt ESC GRAVE  &kp Q               &kp W                 &kp F             &kp P                 &kp B          &kp J        &kp L              &kp U              &kp Y                  &kp SQT              &kp BACKSPACE
-&u_lt 5 CAPS     &u_mt LEFT_SHIFT A  &u_mt LEFT_CONTROL R  &u_mt LEFT_ALT S  &u_mt LEFT_COMMAND T  &kp G          &kp M        &u_mt RIGHT_GUI N  &u_mt RIGHT_ALT E  &u_mt RIGHT_CONTROL I  &u_mt RIGHT_SHIFT O  &kp EXCL
-&sk LEFT_SHIFT   &u_lt 3 Z           &u_mt RALT X          &kp C             &kp D                 &kp V          &kp K        &kp H              &u_comma_morph     &u_dot_morph           &u_lt 3 SLASH        &u_mt RIGHT_SHIFT MINUS
-                                                           &sk LEFT_GUI      &u_lt 4 SPACE         &u_lt 6 TAB    &u_lt 8 RET  &u_lt 7 BSPC       &u_lt 9 DEL
-            >;
-        };
-
         EXTRA {
             label = "Extra";
             bindings = <
-&u_mt ESC GRAVE  &kp Q          &kp W                 &kp E             &kp R             &kp T          &kp Y        &kp U              &kp I              &kp O                  &kp P                  &kp BACKSPACE
-&u_lt 5 CAPS     &u_mt LSHFT A  &u_mt LEFT_CONTROL S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &u_mt RIGHT_CONTROL L  &u_mt RIGHT_SHIFT SQT  &kp EXCL
-&sk LEFT_SHIFT   &u_lt 3 Z      &u_mt RALT X          &kp C             &kp V             &u_lt 5 B      &kp N        &kp M              &kp COMMA          &u_mt RALT DOT         &u_lt 3 SLASH          &u_mt RIGHT_SHIFT MINUS
-                                                      &sk LEFT_GUI      &u_lt 4 SPACE     &u_lt 6 TAB    &u_lt 8 RET  &u_lt 7 BSPC       &u_lt 9 DEL
-            >;
-        };
-
-        TAP {
-            label = "Tap";
-            bindings = <
-&u_to_U_BASE  &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J    &kp L     &kp U      &kp Y    &kp SQT    &none
-&none         &kp A  &kp R  &kp S    &kp T      &kp G      &kp M    &kp N     &kp E      &kp I    &kp O      &none
-&none         &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K    &kp H     &kp COMMA  &kp DOT  &kp SLASH  &none
-                            &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL
+&u_mt ESC GRAVE  &kp Q      &kp W  &kp E             &kp R             &kp T          &kp Y        &kp U              &kp I              &kp O         &kp P           &kp BACKSPACE
+&u_lt 3 CLCK     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L         &u_mt AMPS SQT  &u_mt AT EQUAL
+&sk LEFT_SHIFT   &u_lt 7 Z  &kp X  &kp C             &kp V             &u_lt 3 B      &kp N        &kp M              &u_comma_morph     &u_dot_morph  &mt EXCL SLASH  &sk RCTRL
+                                   &sk LEFT_GUI      &u_lt 2 SPACE     &u_lt 4 TAB    &u_lt 6 RET  &u_lt 5 BSPC       &u_lt 7 COLON
             >;
         };
 
@@ -147,7 +127,7 @@
         NUM {
             label = "Num";
             bindings = <
-&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE   &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &none
+&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE   &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &kp DEL
 &none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
 &none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &u_to_U_NUM    &u_to_U_NAV    &kp RALT           &none            &none
                           &kp DOT  &kp N0  &kp MINUS    &none  &none          &none
@@ -157,7 +137,7 @@
         SYM {
             label = "Sym";
             bindings = <
-&none  &kp LBRC   &kp AMPS  &kp ASTRK  &kp SLASH  &kp RBRC     &kp LESS_THAN     &u_to_U_BASE       &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &none
+&none  &none      &kp AMPS  &kp ASTRK  &kp BSLH   &none        &kp LESS_THAN     &u_to_U_BASE       &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &kp DEL
 &none  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &kp GREATER_THAN  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
 &none  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none             &u_to_U_SYM        &u_to_U_MOUSE  &kp RALT           &none            &none
                             &kp LPAR   &kp RPAR   &kp UNDER    &none             &none              &none
@@ -171,6 +151,26 @@
 &u_macro_string_lookforrachel_email  &kp F11  &kp F4  &kp F5     &kp F6     &u_macro_select_all_copy    &u_macro_screenshot_all  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &u_macro_screenshot_clipb_all
 &u_macro_string_ctask                &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK             &none                    &u_to_U_FUN    &u_to_U_MEDIA  &kp RALT           &none            &none
                                                       &kp K_APP  &kp SPACE  &kp TAB                     &none                    &none          &none
+            >;
+        };
+
+        TAP {
+            label = "Tap";
+            bindings = <
+&u_to_U_BASE  &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J    &kp L     &kp U      &kp Y    &kp SQT    &none
+&none         &kp A  &kp R  &kp S    &kp T      &kp G      &kp M    &kp N     &kp E      &kp I    &kp O      &none
+&none         &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K    &kp H     &kp COMMA  &kp DOT  &kp SLASH  &none
+                            &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL
+            >;
+        };
+
+        BASE {
+            label = "Base";
+            bindings = <
+&u_mt ESC GRAVE  &kp Q               &kp W                 &kp F             &kp P                 &kp B          &kp J        &kp L              &kp U              &kp Y                  &kp SQT              &kp BACKSPACE
+&u_lt 3 CAPS     &u_mt LEFT_SHIFT A  &u_mt LEFT_CONTROL R  &u_mt LEFT_ALT S  &u_mt LEFT_COMMAND T  &kp G          &kp M        &u_mt RIGHT_GUI N  &u_mt RIGHT_ALT E  &u_mt RIGHT_CONTROL I  &u_mt RIGHT_SHIFT O  &kp EXCL
+&sk LEFT_SHIFT   &u_lt 1 Z           &u_mt RALT X          &kp C             &kp D                 &kp V          &kp K        &kp H              &u_comma_morph     &u_dot_morph           &u_lt 1 SLASH        &u_mt RIGHT_SHIFT MINUS
+                                                           &sk LEFT_GUI      &u_lt 2 SPACE         &u_lt 4 TAB    &u_lt 6 RET  &u_lt 5 BSPC       &u_lt 7 DEL
             >;
         };
     };
@@ -334,7 +334,7 @@
             label = "u_to_U_BASE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 0>;
+            bindings = <&none>, <&to 9>;
         };
     };
 };
@@ -346,7 +346,7 @@
             label = "u_to_U_EXTRA";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 1>;
+            bindings = <&none>, <&to 0>;
         };
     };
 };
@@ -358,7 +358,7 @@
             label = "u_to_U_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 2>;
+            bindings = <&none>, <&to 8>;
         };
     };
 };
@@ -370,7 +370,7 @@
             label = "u_to_U_BUTTON";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 3>;
+            bindings = <&none>, <&to 1>;
         };
     };
 };
@@ -382,7 +382,7 @@
             label = "u_to_U_NAV";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 4>;
+            bindings = <&none>, <&to 2>;
         };
     };
 };
@@ -394,7 +394,7 @@
             label = "u_to_U_MOUSE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 5>;
+            bindings = <&none>, <&to 3>;
         };
     };
 };
@@ -406,7 +406,7 @@
             label = "u_to_U_MEDIA";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 6>;
+            bindings = <&none>, <&to 4>;
         };
     };
 };
@@ -418,7 +418,7 @@
             label = "u_to_U_NUM";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 7>;
+            bindings = <&none>, <&to 5>;
         };
     };
 };
@@ -430,7 +430,7 @@
             label = "u_to_U_SYM";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 8>;
+            bindings = <&none>, <&to 6>;
         };
     };
 };
@@ -442,7 +442,7 @@
             label = "u_to_U_FUN";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 9>;
+            bindings = <&none>, <&to 7>;
         };
     };
 };
