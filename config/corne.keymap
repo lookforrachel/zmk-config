@@ -79,7 +79,7 @@
             bindings = <
 &u_mt ESC GRAVE  &kp Q               &kp W                 &kp F             &kp P                 &kp B          &kp J        &kp L              &kp U              &kp Y                  &kp SQT              &kp BACKSPACE
 &u_lt 5 CAPS     &u_mt LEFT_SHIFT A  &u_mt LEFT_CONTROL R  &u_mt LEFT_ALT S  &u_mt LEFT_COMMAND T  &kp G          &kp M        &u_mt RIGHT_GUI N  &u_mt RIGHT_ALT E  &u_mt RIGHT_CONTROL I  &u_mt RIGHT_SHIFT O  &kp EXCL
-&sk LEFT_SHIFT   &u_lt 3 Z           &u_mt RALT X          &kp C             &kp D                 &kp V          &kp K        &kp H              &kp COMMA          &u_mt RALT DOT         &u_lt 3 SLASH        &u_mt RIGHT_SHIFT MINUS
+&sk LEFT_SHIFT   &u_lt 3 Z           &u_mt RALT X          &kp C             &kp D                 &kp V          &kp K        &kp H              &u_comma_morph     &u_dot_morph           &u_lt 3 SLASH        &u_mt RIGHT_SHIFT MINUS
                                                            &sk LEFT_GUI      &u_lt 4 SPACE         &u_lt 6 TAB    &u_lt 8 RET  &u_lt 7 BSPC       &u_lt 9 DEL
             >;
         };
@@ -629,22 +629,76 @@
             bindings = <&u_macro_app_zoom_end>, <&kp>;
         };
 
-        u_curly_bracket_open: u_curly_bracket_open {
+        u_comma_inner_morph: u_comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "U_CURLY_BRACKET_OPEN";
+            label = "U_COMMA_INNER_MORPH";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LEFT_BRACE>;
+            bindings = <&kp LEFT_BRACE>, <&kp LT>;
 
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        u_curly_bracket_close: u_curly_bracket_close {
+        u_dot_inner_morph: u_dot_inner_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "U_CURLY_BRACKET_CLOSE";
+            label = "U_DOT_INNER_MORPH";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp RIGHT_BRACE>;
+            bindings = <&kp RIGHT_BRACE>, <&kp GT>;
 
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        u_comma_morph: u_comma_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_COMMA_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&u_comma_inner_morph>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        u_dot_morph: u_dot_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_DOT_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&u_dot_inner_morph>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        u_comma_ctrl_inner_morph: u_comma_ctrl_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_COMMA_CTRL_INNER_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LEFT_BRACKET>;
+
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        u_dot_ctrl_inner_morph: u_dot_ctrl_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_DOT_CTRL_INNER_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp RBKT>;
+
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        u_comma_ctrl_morph: u_comma_ctrl_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_COMMA_CTRL_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&u_comma_ctrl_inner_morph>;
+
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        u_dot_ctrl_morph: u_dot_ctrl_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_DOT_CTRL_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&u_dot_ctrl_inner_morph>;
+
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 };
