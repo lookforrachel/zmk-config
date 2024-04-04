@@ -117,9 +117,9 @@
         NAV {
             label = "Nav";
             bindings = <
-&none  &bootloader     &u_to_U_TAP       &u_to_U_EXTRA  &u_to_U_BASE  &none    &kp K_AGAIN   &kp LS(INS)  &kp UP     &kp LS(DEL)  &kp K_UNDO   &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI  &none    &u_caps_word  &kp LEFT     &kp DOWN   &kp RIGHT    &kp LC(INS)  &none
-&none  &none           &kp RALT          &u_to_U_NUM    &u_to_U_NAV   &none    &kp INS       &kp HOME     &kp PG_DN  &kp PG_UP    &kp END      &none
+&none  &bootloader     &u_to_U_TAP       &u_to_U_EXTRA  &u_to_U_BASE  &none    &kp K_AGAIN   &kp LS(INS)  &kp UP     &kp LS(DEL)   &kp K_UNDO    &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI  &none    &u_caps_word  &kp LEFT     &kp DOWN   &kp RIGHT     &kp RA(UP)    &none
+&none  &none           &kp RALT          &u_to_U_NUM    &u_to_U_NAV   &none    &kp INS       &kp HOME     &kp PG_DN  &kp RA(LEFT)  &kp RA(DOWN)  &kp RA(RIGHT)
                                          &none          &none         &none    &kp RET       &kp BSPC     &kp DEL
             >;
         };
@@ -157,20 +157,20 @@
         SYM {
             label = "Sym";
             bindings = <
-&none  &kp LBRC   &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC     &none  &u_to_U_BASE       &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &none
-&none  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &none  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
-&none  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none  &u_to_U_SYM        &u_to_U_MOUSE  &kp RALT           &none            &none
-                            &kp LPAR   &kp RPAR   &kp UNDER    &none  &none              &none
+&none  &kp LBRC   &kp AMPS  &kp ASTRK  &kp SLASH  &kp RBRC     &kp LESS_THAN     &u_to_U_BASE       &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &none
+&none  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &kp GREATER_THAN  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
+&none  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none             &u_to_U_SYM        &u_to_U_MOUSE  &kp RALT           &none            &none
+                            &kp LPAR   &kp RPAR   &kp UNDER    &none             &none              &none
             >;
         };
 
         FUN {
             label = "Fun";
             bindings = <
-&u_macro_string_work_email           &kp F12  &kp F7  &kp F8     &kp F9     &u_macro_select_all_cut    &u_macro_screenshot      &u_to_U_BASE   &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &u_macro_screenshot_clipboard
-&u_macro_string_lookforrachel_email  &kp F11  &kp F4  &kp F5     &kp F6     &kp SLCK                   &u_macro_screenshot_all  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &u_macro_screenshot_clipb_all
-&u_macro_string_ctask                &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK            &none                    &u_to_U_FUN    &u_to_U_MEDIA  &kp RALT           &none            &none
-                                                      &kp K_APP  &kp SPACE  &kp TAB                    &none                    &none          &none
+&u_macro_string_work_email           &kp F12  &kp F7  &kp F8     &kp F9     &u_macro_select_all_cut     &u_macro_screenshot      &u_to_U_BASE   &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &u_macro_screenshot_clipboard
+&u_macro_string_lookforrachel_email  &kp F11  &kp F4  &kp F5     &kp F6     &u_macro_select_all_copy    &u_macro_screenshot_all  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &u_macro_screenshot_clipb_all
+&u_macro_string_ctask                &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK             &none                    &u_to_U_FUN    &u_to_U_MEDIA  &kp RALT           &none            &none
+                                                      &kp K_APP  &kp SPACE  &kp TAB                     &none                    &none          &none
             >;
         };
     };
@@ -519,7 +519,7 @@
         u_macro_app_zoom_end: u_macro_app_zoom_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&u_macro_app_zoom &kp LG(W) &kp ENTER>;
+            bindings = <&kp LG(W) &kp ENTER>;
             label = "U_MACRO_APP_ZOOM_END";
             wait-ms = <1000>;
         };
@@ -572,6 +572,13 @@
             bindings = <&kp LG(LS(NUMBER_3))>;
             label = "U_MACRO_SCREENSHOT_ALL";
         };
+
+        u_macro_select_all_copy: u_macro_select_all_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A) &kp LG(C)>;
+            label = "U_MACRO_SELECT_ALL_COPY";
+        };
     };
 };
 
@@ -620,6 +627,24 @@
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&u_macro_app_zoom_end>, <&kp>;
+        };
+
+        u_curly_bracket_open: u_curly_bracket_open {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_CURLY_BRACKET_OPEN";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LEFT_BRACE>;
+
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        u_curly_bracket_close: u_curly_bracket_close {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_CURLY_BRACKET_CLOSE";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp RIGHT_BRACE>;
+
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
     };
 };
