@@ -117,9 +117,9 @@
         NAV {
             label = "Nav";
             bindings = <
-&none  &bootloader     &u_to_U_TAP       &u_to_U_EXTRA  &u_to_U_BASE  &none    &kp K_AGAIN   &kp LS(INS)  &kp UP     &kp LS(DEL)   &kp K_UNDO    &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI  &none    &u_caps_word  &kp LEFT     &kp DOWN   &kp RIGHT     &kp RA(UP)    &none
-&none  &none           &kp RALT          &u_to_U_NUM    &u_to_U_NAV   &none    &kp INS       &kp HOME     &kp PG_DN  &kp RA(LEFT)  &kp RA(DOWN)  &kp RA(RIGHT)
+&none  &bootloader     &u_to_U_TAP       &u_to_U_EXTRA  &u_to_U_BASE  &none    &kp K_AGAIN   &kp LS(INS)  &kp UP     &kp LS(DEL)       &kp K_UNDO        &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI  &none    &u_caps_word  &kp LEFT     &kp DOWN   &kp RIGHT         &kp RA(RG(UP))    &none
+&none  &none           &kp RALT          &u_to_U_NUM    &u_to_U_NAV   &none    &kp INS       &kp HOME     &kp PG_DN  &kp RA(RG(LEFT))  &kp RA(RG(DOWN))  &kp RA(RG(RIGHT))
                                          &none          &none         &none    &kp RET       &kp BSPC     &kp DEL
             >;
         };
