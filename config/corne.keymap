@@ -78,7 +78,7 @@
             label = "Extra";
             bindings = <
 &u_mt ESC GRAVE  &kp Q      &kp W  &kp E             &kp R             &kp T          &kp Y        &kp U              &kp I              &kp O         &kp P           &kp BACKSPACE
-&u_lt 3 CLCK     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L         &u_mt AMPS SQT  &u_mt AT EQUAL
+&kp CAPSLOCK     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L         &u_mt AMPS SQT  &u_mt AT EQUAL
 &sk LEFT_SHIFT   &u_lt 7 Z  &kp X  &kp C             &kp V             &u_lt 3 B      &kp N        &kp M              &u_comma_morph     &u_dot_morph  &mt EXCL SLASH  &sk RCTRL
                                    &sk LEFT_GUI      &u_lt 2 SPACE     &u_lt 4 TAB    &u_lt 6 RET  &u_lt 5 DEL        &u_lt 7 COLON
             >;
