@@ -128,7 +128,7 @@
             label = "Base";
             bindings = <
 &u_mt ESC GRAVE  &kp Q               &kp W                 &kp F             &kp P                 &kp B            &kp J        &kp L              &kp U              &kp Y                  &kp SQT              &kp BACKSPACE
-&u_lt 6 CAPS     &u_mt LEFT_SHIFT A  &u_mt LEFT_CONTROL R  &u_mt LEFT_ALT S  &u_mt LEFT_COMMAND T  &kp G            &kp M        &u_mt RIGHT_GUI N  &u_mt RIGHT_ALT E  &u_mt RIGHT_CONTROL I  &u_mt RIGHT_SHIFT O  &kp EXCL
+&u_caps_word     &u_mt LEFT_SHIFT A  &u_mt LEFT_CONTROL R  &u_mt LEFT_ALT S  &u_mt LEFT_COMMAND T  &kp G            &kp M        &u_mt RIGHT_GUI N  &u_mt RIGHT_ALT E  &u_mt RIGHT_CONTROL I  &u_mt RIGHT_SHIFT O  &kp EXCL
 &sk LEFT_SHIFT   &u_lt 5 Z           &u_mt RALT X          &kp C             &kp D                 &kp V            &kp K        &kp H              &kp COMMA          &u_mt RALT DOT         &u_lt 5 SLASH        &u_mt RIGHT_SHIFT MINUS
                                                            &sk LEFT_GUI      &none                 &u_lt 7 SPACE    &u_lt 1 RET  &u_lt 2 BSPC       &none
             >;
