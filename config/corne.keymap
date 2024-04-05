@@ -10,34 +10,9 @@
     combos {
         compatible = "zmk,combos";
 
-        u_combo_fun {
-            bindings = <&to 7>;
-            key-positions = <0 1>;
-        };
-
-        u_combo_num {
-            bindings = <&to 5>;
-            key-positions = <12 13>;
-        };
-
-        u_combo_sym {
-            bindings = <&to 6>;
-            key-positions = <24 25>;
-        };
-
         u_combo_base {
             bindings = <&to 9>;
             key-positions = <10 11>;
-        };
-
-        u_combo_nav {
-            bindings = <&to 2>;
-            key-positions = <22 23>;
-        };
-
-        u_combo_media {
-            bindings = <&to 4>;
-            key-positions = <35 34>;
         };
 
         u_combo_esc {
@@ -63,11 +38,6 @@
         u_combo_zoom_end {
             bindings = <&u_macro_app_zoom_end>;
             key-positions = <30 31>;
-        };
-
-        u {
-            bindings = <&kp AT>;
-            key-positions = <13 14>;
         };
     };
 
