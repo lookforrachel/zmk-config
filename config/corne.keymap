@@ -79,7 +79,7 @@
             bindings = <
 &none  &bootloader     &u_to_U_TAP       &u_to_U_EXTRA  &u_to_U_BASE  &none    &kp K_AGAIN   &kp LS(INS)  &kp UP     &kp LS(DEL)       &kp K_UNDO        &none
 &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI  &none    &u_caps_word  &kp LEFT     &kp DOWN   &kp RIGHT         &kp RA(RG(UP))    &none
-&none  &none           &kp RALT          &u_to_U_NUM    &u_to_U_NAV   &none    &kp INS       &kp HOME     &kp PG_DN  &kp RA(RG(LEFT))  &kp RA(RG(DOWN))  &kp RA(RG(RIGHT))
+&none  &none           &kp RALT          &u_to_U_NUM    &u_to_U_NAV   &none    &kp INS       &kp PAGE_UP  &kp PG_DN  &kp RA(RG(LEFT))  &kp RA(RG(DOWN))  &kp RA(RG(RIGHT))
                                          &none          &none         &none    &kp RET       &kp BSPC     &kp DEL
             >;
         };
@@ -117,10 +117,10 @@
         SYM {
             label = "Sym";
             bindings = <
-&none  &none      &kp AMPS  &kp ASTRK  &kp BSLH   &none        &kp LESS_THAN     &u_to_U_BASE       &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &kp DEL
-&none  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &kp GREATER_THAN  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
-&none  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none             &u_to_U_SYM        &u_to_U_MOUSE  &kp RALT           &none            &none
-                            &kp LPAR   &kp RPAR   &kp UNDER    &none             &none              &none
+&none  &kp LBRC   &kp AMPS  &kp ASTRK  &kp BSLH   &kp RBRC     &u_macro_curly_brackets  &u_to_U_BASE            &u_to_U_EXTRA           &u_to_U_TAP        &bootloader      &kp DEL
+&none  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &u_macro_brackets        &kp RIGHT_COMMAND       &kp RIGHT_ALT           &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
+&none  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &u_macro_sq_brackets     &u_macro_double_quotes  &u_macro_single_quotes  &kp RALT           &none            &none
+                            &kp LPAR   &kp RPAR   &kp UNDER    &none                    &none                   &none
             >;
         };
 
@@ -549,6 +549,48 @@
             bindings = <&kp LG(A) &kp LG(C)>;
             label = "U_MACRO_SELECT_ALL_COPY";
         };
+
+        u_macro_brackets: u_macro_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "U_MACRO_BRACKETS";
+        };
+
+        u_macro_sq_brackets: u_macro_sq_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT_ARROW>;
+            label = "U_MACRO_SQ_BRACKETS";
+        };
+
+        u_macro_curly_brackets: u_macro_curly_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT_ARROW>;
+            label = "U_MACRO_CURLY_BRACKETS";
+        };
+
+        u_macro_angled_brackets: u_macro_angled_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp GT &kp LEFT_ARROW>;
+            label = "U_MACRO_ANGLED_BRACKETS";
+        };
+
+        u_macro_double_quotes: u_macro_double_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT_ARROW>;
+            label = "U_MACRO_DOUBLE_QUOTES";
+        };
+
+        u_macro_single_quotes: u_macro_single_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT_ARROW>;
+            label = "U_MACRO_SINGLE_QUOTES";
+        };
     };
 };
 
@@ -603,7 +645,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "U_COMMA_INNER_MORPH";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE>, <&kp LT>;
+            bindings = <&kp LESS_THAN>, <&kp LEFT_BRACE>;
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
@@ -612,7 +654,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "U_DOT_INNER_MORPH";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACE>, <&kp GT>;
+            bindings = <&kp GREATER_THAN>, <&kp RIGHT_BRACE>;
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
