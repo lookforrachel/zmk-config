@@ -47,10 +47,10 @@
         EXTRA {
             label = "Extra";
             bindings = <
-&u_mt ESC GRAVE  &kp Q      &kp W         &kp E             &kp R              &kp T                 &kp Y                  &kp U               &kp I                 &kp O            &kp P             &kp BACKSPACE
-&u_caps_word     &kp A      &kp S         &u_mt LEFT_ALT D  &kp F              &kp G                 &kp H                  &kp J               &u_mt RIGHT_ALT K     &kp L            &u_mt AMPS SQT    &sk RIGHT_ALT
-&sk LEFT_SHIFT   &u_lt 5 Z  &u_mt RALT X  &kp C             &kp V              &u_lt 6 B             &kp N                  &kp M               &u_mt AT_SIGN COMMA   &u_mt COLON DOT  &u_mt EXCL SLASH  &u_mt LEFT_SHIFT MINUS
-                                          &sk LEFT_GUI      &u_mt LCTRL SPACE  &u_tog_layer 3 TAB    &u_tog_layer 1 RETURN  &u_tog_layer 2 DEL  &u_tog_layer 4 COLON
+&u_mt ESC GRAVE  &kp Q      &kp W         &kp E             &kp R                 &kp T                     &kp Y                  &kp U               &kp I                 &kp O            &kp P             &kp BACKSPACE
+&u_caps_word     &kp A      &kp S         &u_mt LEFT_ALT D  &kp F                 &kp G                     &kp H                  &kp J               &u_mt RIGHT_ALT K     &kp L            &u_mt AMPS SQT    &sk RIGHT_ALT
+&sk LEFT_SHIFT   &u_lt 5 Z  &u_mt RALT X  &kp C             &kp V                 &u_lt 6 B                 &kp N                  &kp M               &u_mt AT_SIGN COMMA   &u_mt COLON DOT  &u_mt EXCL SLASH  &u_mt LEFT_SHIFT MINUS
+                                          &sk LEFT_GUI      &u_tog_layer 3 SPACE  &u_mt LEFT_CONTROL TAB    &u_tog_layer 1 RETURN  &u_tog_layer 2 DEL  &u_tog_layer 4 COLON
             >;
         };
 
