@@ -67,7 +67,7 @@
         SYM {
             label = "Sym";
             bindings = <
-&none  &kp LBRC   &kp AMPS  &kp ASTRK  &kp BSLH   &kp RBRC     &u_macro_curly_brackets  &u_to_U_BASE            &u_to_U_EXTRA           &u_to_U_TAP        &bootloader      &kp DEL
+&none  &kp LBRC   &kp AMPS  &kp ASTRK  &kp BSLH   &kp RBRC     &u_macro_curly_brackets  &u_to_U_BASE            &u_to_U_EXTRA           &none              &bootloader      &kp DEL
 &none  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &u_macro_brackets        &kp RIGHT_COMMAND       &kp RIGHT_ALT           &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
 &none  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &u_macro_sq_brackets     &u_macro_double_quotes  &u_macro_single_quotes  &kp RALT           &none            &none
                             &kp LPAR   &kp RPAR   &kp UNDER    &none                    &none                   &none
@@ -77,7 +77,7 @@
         NUM {
             label = "Num";
             bindings = <
-&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE   &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &kp DEL
+&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE   &u_to_U_EXTRA  &none              &bootloader      &kp DEL
 &none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
 &none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &u_to_U_NUM    &u_to_U_NAV    &kp RALT           &none            &none
                           &kp DOT  &kp N0  &kp MINUS    &none  &none          &none
@@ -87,17 +87,17 @@
         NAV {
             label = "Nav";
             bindings = <
-&none  &bootloader     &u_to_U_TAP       &u_to_U_EXTRA  &u_to_U_BASE  &none    &kp K_AGAIN   &kp LS(INS)  &kp UP     &kp LS(DEL)       &kp K_UNDO        &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI  &none    &u_caps_word  &kp LEFT     &kp DOWN   &kp RIGHT         &kp RA(RG(UP))    &none
-&none  &none           &kp RALT          &u_to_U_NUM    &u_to_U_NAV   &none    &kp INS       &kp PAGE_UP  &kp PG_DN  &kp RA(RG(LEFT))  &kp RA(RG(DOWN))  &kp RA(RG(RIGHT))
-                                         &none          &none         &none    &kp RET       &kp BSPC     &kp DEL
+&none  &bootloader     &none             &kp LA(UP_ARROW)  &u_to_U_BASE   &none    &none     &none        &kp UP     &none             &none             &none
+&none  &none           &kp LA(LEFT)      &kp LA(DOWN)      &kp LA(RIGHT)  &none    &kp HOME  &kp LEFT     &kp DOWN   &kp RIGHT         &kp RA(RG(UP))    &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT      &kp LEFT_GUI   &none    &kp INS   &kp PAGE_UP  &kp PG_DN  &kp RA(RG(LEFT))  &kp RA(RG(DOWN))  &kp RA(RG(RIGHT))
+                                         &none             &none          &none    &kp RET   &kp BSPC     &kp DEL
             >;
         };
 
         MEDIA {
             label = "Media";
             bindings = <
-&none  &bootloader     &u_to_U_TAP       &u_to_U_EXTRA  &u_to_U_BASE   &none    &u_out_tog         &none        &kp C_VOL_UP  &none        &none        &none
+&none  &bootloader     &none             &u_to_U_EXTRA  &u_to_U_BASE   &none    &u_out_tog         &none        &kp C_VOL_UP  &none        &none        &none
 &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI   &none    &ext_power EP_TOG  &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   &none        &none
 &none  &none           &kp RALT          &u_to_U_FUN    &u_to_U_MEDIA  &none    &u_bt_sel_0        &u_bt_sel_1  &u_bt_sel_2   &u_bt_sel_3  &u_bt_sel_4  &none
                                          &none          &none          &none    &kp C_STOP         &kp C_PP     &kp C_MUTE
@@ -107,7 +107,7 @@
         FUN {
             label = "Fun";
             bindings = <
-&u_macro_string_work_email           &kp F12  &kp F7  &kp F8     &kp F9     &u_macro_select_all_cut     &u_macro_screenshot      &u_to_U_BASE   &u_to_U_EXTRA  &u_to_U_TAP        &bootloader      &u_macro_screenshot_clipboard
+&u_macro_string_work_email           &kp F12  &kp F7  &kp F8     &kp F9     &u_macro_select_all_cut     &u_macro_screenshot      &u_to_U_BASE   &u_to_U_EXTRA  &none              &bootloader      &u_macro_screenshot_clipboard
 &u_macro_string_lookforrachel_email  &kp F11  &kp F4  &kp F5     &kp F6     &u_macro_select_all_copy    &u_macro_screenshot_all  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &u_macro_screenshot_clipb_all
 &u_macro_string_ctask                &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK             &none                    &u_to_U_FUN    &u_to_U_MEDIA  &kp RALT           &none            &none
                                                       &kp K_APP  &kp SPACE  &kp TAB                     &none                    &none          &none
