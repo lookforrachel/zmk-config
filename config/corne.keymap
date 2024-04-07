@@ -37,7 +37,17 @@
 
         u_combo_zoom_end {
             bindings = <&u_macro_app_zoom_end>;
-            key-positions = <30 31>;
+            key-positions = <31 30>;
+        };
+
+        u_combo_angle_open {
+            bindings = <&kp LT>;
+            key-positions = <32 31>;
+        };
+
+        u_combo_angle_close {
+            bindings = <&kp GT>;
+            key-positions = <32 33>;
         };
     };
 
@@ -48,7 +58,7 @@
             label = "Extra";
             bindings = <
 &u_mt ESC GRAVE  &kp Q      &kp W  &kp E             &kp R             &kp T          &kp Y        &kp U              &kp I              &kp O           &kp P           &kp BACKSPACE
-&u_caps_word     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS SQT  &u_mt AT EQUAL
+&u_caps_word     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AT EQUAL  &u_mt AMPS SQT
 &sk LEFT_SHIFT   &u_lt 0 Z  &kp X  &kp C             &kp V             &u_lt 0 B      &kp N        &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &sk RCTRL
                                    &sk LEFT_GUI      &u_lt 5 SPACE     &u_lt 5 TAB    &u_lt 2 RET  &u_lt 3 DEL        &u_lt 6 COLON
             >;
