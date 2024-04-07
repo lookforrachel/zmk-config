@@ -52,17 +52,17 @@
 
         u_combo_playpause {
             bindings = <&kp C_PLAY_PAUSE>;
-            key-positions = <36 41>;
+            key-positions = <29 30>;
         };
 
         u_combo_volup {
             bindings = <&kp C_VOL_UP>;
-            key-positions = <11 23>;
+            key-positions = <10 22>;
         };
 
         u_combo_voldown {
             bindings = <&kp C_VOL_DN>;
-            key-positions = <23 35>;
+            key-positions = <22 34>;
         };
     };
 
