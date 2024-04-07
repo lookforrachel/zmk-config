@@ -22,7 +22,7 @@
 
         u_combo_extra {
             bindings = <&to 0>;
-            key-positions = <11 23>;
+            key-positions = <23 22>;
         };
 
         u_combo_zoom {
@@ -48,6 +48,21 @@
         u_combo_angle_close {
             bindings = <&kp GT>;
             key-positions = <32 33>;
+        };
+
+        u_combo_playpause {
+            bindings = <&kp C_PLAY_PAUSE>;
+            key-positions = <36 41>;
+        };
+
+        u_combo_volup {
+            bindings = <&kp C_VOL_UP>;
+            key-positions = <11 23>;
+        };
+
+        u_combo_voldown {
+            bindings = <&kp C_VOL_DN>;
+            key-positions = <23 35>;
         };
     };
 
