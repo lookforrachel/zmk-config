@@ -152,10 +152,10 @@
         FUN {
             label = "Fun";
             bindings = <
-&u_macro_string_work_email           &kp F12  &kp F7  &kp F8     &kp F9     &u_macro_select_all_cut     &u_macro_screenshot      &u_to_U_BASE   &u_to_U_EXTRA  &none              &bootloader      &u_macro_screenshot_clipboard
-&u_macro_string_lookforrachel_email  &kp F11  &kp F4  &kp F5     &kp F6     &u_macro_select_all_copy    &u_macro_screenshot_all  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &u_macro_screenshot_clipb_all
-&u_macro_string_ctask                &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK             &none                    &u_to_U_FUN    &u_to_U_MEDIA  &kp RALT           &none            &none
-                                                      &kp K_APP  &kp SPACE  &kp TAB                     &none                    &none          &none
+&none   &bootloader     &u_macro_screenshot_all     &u_macro_screenshot             &u_macro_screenshot_clipboard   &u_macro_screenshot_clipb_all              &none       &kp F7         &kp F8      &kp F9        &bootloader &kp F12     
+&none   &none           &u_macro_string_ctask       &u_macro_string_work_email      &u_macro_select_all_copy        &u_macro_select_all_cut                    &none       &kp F4         &kp F5      &kp F6        &kp F11     &none
+&none   &none           &none                       &none                           &none                           &none                                      &none       &kp F1         &kp F2      &kp F3        &kp F10     &none
+                                                    &none                           &kp SPACE                       &kp TAB                                    &none       &none          &none
             >;
         };
     };
