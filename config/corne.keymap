@@ -36,18 +36,8 @@
         };
 
         u_combo_zoom_end {
-            bindings = <&u_macro_app_zoom_end>;
-            key-positions = <31 30>;
-        };
-
-        u_combo_angle_open {
-            bindings = <&kp LT>;
-            key-positions = <32 31>;
-        };
-
-        u_combo_angle_close {
-            bindings = <&kp GT>;
-            key-positions = <32 33>;
+            bindings = <&u_macro_app_close_window>;
+            key-positions = <1 10>;
         };
 
         u_combo_playpause {
@@ -67,22 +57,22 @@
 
         u_combo_left {
             bindings = <&kp LEFT>;
-            key-positions = <30 32>;
+            key-positions = <32 31>;
         };
 
         u_combo_right {
             bindings = <&kp RIGHT>;
-            key-positions = <33 31>;
+            key-positions = <33 32>;
         };
 
         u_combo_up {
             bindings = <&kp UP>;
-            key-positions = <19 20 21>;
+            key-positions = <16 17>;
         };
 
         u_combo_down {
             bindings = <&kp DOWN>;
-            key-positions = <31 32 33>;
+            key-positions = <28 29>;
         };
     };
 
@@ -92,20 +82,20 @@
         EXTRA {
             label = "Extra";
             bindings = <
-&u_mt ESC GRAVE  &kp Q      &kp W  &kp E             &kp R             &kp T          &kp Y        &kp U              &kp I              &kp O           &kp P             &kp BACKSPACE
-&u_caps_word     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
-&sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp V             &kp B          &kp N        &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                   &sk LEFT_GUI      &u_lt 4 SPACE     &u_lt 5 TAB    &u_lt 2 RET  &u_lt 3 BSPC       &u_lt 6 DEL
+&u_mt ESC GRAVE  &kp Q      &kp W  &kp E             &kp R             &kp T             &kp Y           &kp U              &kp I              &kp O           &kp P             &kp BACKSPACE
+&u_caps_word     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G             &kp H           &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
+&sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp V             &u_meh_key 0 B    &u_meh_key 0 N  &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                   &sk LEFT_GUI      &u_lt 4 SPACE     &u_lt 5 TAB       &u_lt 2 RET     &u_lt 3 BSPC       &u_lt 6 DEL
             >;
         };
 
         BASE {
             label = "Base";
             bindings = <
-&u_mt ESC GRAVE  &kp Q      &kp W  &kp F             &kp P          &kp B          &kp J        &kp L         &kp U              &kp Y           &mt AMPS SQT    &kp BACKSPACE
-&u_caps_word     &kp A      &kp R  &u_mt LEFT_ALT S  &kp T          &kp G          &kp M        &kp N         &u_mt RIGHT_ALT E  &kp I           &kp O           &mt RCTRL MINUS
-&sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp D          &kp V          &kp K        &kp H         &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                   &sk LEFT_GUI      &u_lt 4 SPACE  &u_lt 5 TAB    &u_lt 2 RET  &u_lt 3 BSPC  &u_lt 6 DEL
+&u_mt ESC GRAVE  &kp Q      &kp W  &kp F             &kp P          &kp B             &kp J           &kp L         &kp U              &kp Y           &mt AMPS SQT    &kp BACKSPACE
+&u_caps_word     &kp A      &kp R  &u_mt LEFT_ALT S  &kp T          &kp G             &kp M           &kp N         &u_mt RIGHT_ALT E  &kp I           &kp O           &mt RCTRL MINUS
+&sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp D          &u_meh_key 0 V    &u_meh_key 0 K  &kp H         &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                   &sk LEFT_GUI      &u_lt 4 SPACE  &u_lt 5 TAB       &u_lt 2 RET     &u_lt 3 BSPC  &u_lt 6 DEL
             >;
         };
 
@@ -501,12 +491,12 @@
             label = "U_MACRO_APP_ZOOM_MIC";
         };
 
-        u_macro_app_zoom_end: u_macro_app_zoom_end {
+        u_macro_app_close_window: u_macro_app_close_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(W) &kp ENTER>;
-            label = "U_MACRO_APP_ZOOM_END";
-            wait-ms = <1000>;
+            label = "U_MACRO_APP_CLOSE_WINDOW";
+            wait-ms = <500>;
         };
 
         u_macro_string_ryee: u_macro_string_ryee {
@@ -648,6 +638,13 @@
             bindings = <&kp LG(A)>;
             label = "U_MACRO_SELECT_ALL";
         };
+
+        u_macro_meh_key: u_macro_meh_key {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LEFT_GUI)))>;
+            label = "U_MACRO_MEH_KEY";
+        };
     };
 };
 
@@ -695,7 +692,7 @@
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&u_macro_app_zoom_end>, <&kp>;
+            bindings = <&u_macro_app_close_window>, <&kp>;
         };
 
         u_comma_inner_morph: u_comma_inner_morph {
@@ -777,6 +774,15 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <1>;
+        };
+
+        u_meh_key: u_meh_key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "U_MEH_KEY";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&u_macro_meh_key>, <&kp>;
         };
     };
 };
