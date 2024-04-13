@@ -93,7 +93,7 @@
             label = "Extra";
             bindings = <
 &u_mt ESC GRAVE  &kp Q      &kp W  &kp E             &kp R             &kp T          &kp Y        &kp U              &kp I              &kp O           &kp P             &kp BACKSPACE
-&u_caps_word     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS MINUS  &u_mt RCTRL SQT
+&u_caps_word     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G          &kp H        &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
 &sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp V             &kp B          &kp N        &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
                                    &sk LEFT_GUI      &u_lt 4 SPACE     &u_lt 5 TAB    &u_lt 2 RET  &u_lt 3 BSPC       &u_lt 6 DEL
             >;
@@ -102,8 +102,8 @@
         BASE {
             label = "Base";
             bindings = <
-&u_mt ESC GRAVE  &kp Q      &kp W  &kp F             &kp P          &kp B          &kp J        &kp L         &kp U              &kp Y           &mt AMPS MINUS  &kp BACKSPACE
-&u_caps_word     &kp A      &kp R  &u_mt LEFT_ALT S  &kp T          &kp G          &kp M        &kp N         &u_mt RIGHT_ALT E  &kp I           &kp O           &mt RCTRL SQT
+&u_mt ESC GRAVE  &kp Q      &kp W  &kp F             &kp P          &kp B          &kp J        &kp L         &kp U              &kp Y           &mt AMPS SQT    &kp BACKSPACE
+&u_caps_word     &kp A      &kp R  &u_mt LEFT_ALT S  &kp T          &kp G          &kp M        &kp N         &u_mt RIGHT_ALT E  &kp I           &kp O           &mt RCTRL MINUS
 &sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp D          &kp V          &kp K        &kp H         &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
                                    &sk LEFT_GUI      &u_lt 4 SPACE  &u_lt 5 TAB    &u_lt 2 RET  &u_lt 3 BSPC  &u_lt 6 DEL
             >;
