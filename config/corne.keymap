@@ -84,7 +84,7 @@
 &u_mt ESC GRAVE  &kp Q      &kp W  &kp E             &kp R             &kp T                           &kp Y                          &kp U              &kp I              &kp O           &kp P             &kp BACKSPACE
 &u_caps_word     &kp A      &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G                           &kp H                          &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
 &sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp V             &u_mt LS(LA(LC(LEFT_GUI))) B    &u_mt RS(RA(RC(RIGHT_GUI))) N  &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                   &sk LEFT_GUI      &u_lt 4 SPACE     &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC       &u_lt 6 DEL
+                                   &sk LEFT_GUI      &u_lt 4 SPACE     &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC       &to 2
             >;
         };
 
@@ -94,7 +94,7 @@
 &u_mt ESC GRAVE  &kp Q      &kp W  &kp F             &kp P          &kp B                           &kp J                          &kp L         &kp U              &kp Y           &mt AMPS SQT    &kp BACKSPACE
 &u_caps_word     &kp A      &kp R  &u_mt LEFT_ALT S  &kp T          &kp G                           &kp M                          &kp N         &u_mt RIGHT_ALT E  &kp I           &kp O           &mt RCTRL MINUS
 &sk LEFT_SHIFT   &u_lt 6 Z  &kp X  &kp C             &kp D          &u_mt LS(LA(LC(LEFT_GUI))) V    &u_mt RS(RA(RC(RIGHT_GUI))) K  &kp H         &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                   &sk LEFT_GUI      &u_lt 4 SPACE  &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC  &u_lt 6 DEL
+                                   &sk LEFT_GUI      &u_lt 4 SPACE  &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC  &to 2
             >;
         };
 
@@ -104,7 +104,7 @@
 &none  &kp LBRC   &kp AMPS  &kp ASTRK          &kp BSLH                &kp RBRC     &u_macro_curly_brackets  &kp LBKT         &kp C          &kp RBKT                  &bootloader      &kp DEL
 &none  &kp COLON  &kp DLLR  &kp PRCNT          &kp CARET               &kp PLUS     &u_macro_sq_brackets     &u_mt LGUI LPAR  &kp RIGHT_ALT  &u_mt RIGHT_CONTROL RPAR  &kp RIGHT_SHIFT  &none
 &none  &kp TILDE  &kp EXCL  &kp AT             &kp HASH                &kp PIPE     &u_macro_single_quotes   &kp LBRC         &none          &kp RBRC                  &none            &none
-                            &u_macro_brackets  &u_macro_double_quotes  &kp UNDER    &none                    &none            &none
+                            &u_macro_brackets  &u_macro_double_quotes  &kp UNDER    &to 4                    &to 0            &to 3
             >;
         };
 
@@ -114,7 +114,7 @@
 &none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE   &u_to_U_EXTRA  &none              &bootloader      &kp DEL
 &none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
 &none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp SLASH    &none  &u_to_U_NUM    &u_to_U_NAV    &kp RALT           &none            &none
-                          &kp DOT  &kp N0  &kp MINUS    &none  &none          &none
+                          &kp DOT  &kp N0  &kp MINUS    &none  &to 0          &to 4
             >;
         };
 
@@ -124,7 +124,7 @@
 &none     &bootloader     &none             &kp LA(LS(UP_ARROW))  &u_to_U_BASE       &none            &none    &none          &kp UP         &none              &none             &none
 &kp HOME  &none           &kp LA(LS(LEFT))  &kp LA(LS(DOWN))      &kp LA(LS(RIGHT))  &kp PAGE_UP      &none    &kp LEFT       &kp DOWN       &kp RIGHT          &kp RA(RG(LEFT))  &kp RA(RG(RIGHT))
 &kp END   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT          &kp LEFT_GUI       &kp PAGE_DOWN    &none    &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RSHIFT        &none
-                                            &none                 &none              &none            &kp RET  &kp BSPC       &kp DEL
+                                            &none                 &none              &none            &kp RET  &to 0          &kp DEL
             >;
         };
 
