@@ -3,7 +3,6 @@
         a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <15>;
-        status = "disabled";
     }
 
         top_encoder: encoder_top {
@@ -11,11 +10,9 @@
         a-gpios = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <15>;
-        status = "disabled";
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&bottom_encoder &top_encoder>;
-        triggers-per-rotation = <20>;
     };
