@@ -1,3 +1,4 @@
+{    
     bottom_encoder: bottom_encoder {
         compatible = "alps,ec11";
         label = "BOTTOM_ENCODER";
@@ -18,3 +19,4 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&bottom_encoder &top_encoder>;
     };
+};
