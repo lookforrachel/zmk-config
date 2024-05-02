@@ -1,4 +1,4 @@
-{    
+/ {    
     bottom_encoder: bottom_encoder {
         compatible = "alps,ec11";
         label = "BOTTOM_ENCODER";
