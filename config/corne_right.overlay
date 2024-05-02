@@ -1,0 +1,7 @@
+&bottom_encoder {
+    status = "okay";
+};
+
+&top_encoder {
+    status = "okay";
+};
