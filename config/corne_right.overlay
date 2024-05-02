@@ -1,3 +1,5 @@
+#include "corne.dtsi"
+
 &bottom_encoder {
     status = "okay";
 };
