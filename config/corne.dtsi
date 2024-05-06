@@ -64,14 +64,14 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
         label = "BOTTOM_ENCODER";
         a-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <30>;
         status = "disabled";
-        steps = <15>;
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&bottom_encoder>;
-        triggers-per-rotation = <30>;
+        triggers-per-rotation = <15>;
     };
 
     // TODO: per-key RGB node(s)?
