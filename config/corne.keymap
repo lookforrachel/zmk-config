@@ -82,9 +82,9 @@
             label = "QWERTY";
             bindings = <
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &kp W  &kp E             &kp R             &kp T                           &kp Y                          &kp U              &kp I              &kp O           &kp P             &kp BACKSPACE
-&u_caps_word     &kp A          &kp S  &u_mt LEFT_ALT D  &u_mt LEFT_GUI F  &kp G                           &kp H                          &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
-&sk LEFT_SHIFT   &u_lt 6 Z      &kp X  &kp C             &kp V             &u_mt LS(LA(LC(LEFT_GUI))) B    &u_mt RS(RA(RC(RIGHT_GUI))) N  &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                       &sk LEFT_GUI      &u_lt 4 SPACE     &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC       &to 2
+&u_caps_word     &kp A          &kp S  &u_mt LEFT_ALT D  &u_mt LGUI F  &kp G                           &kp H                          &u_mt RIGHT_GUI J  &u_mt RIGHT_ALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
+&sk LEFT_SHIFT   &u_lt 6 Z      &kp X  &kp C             &kp V             &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RIGHT_GUI))) N  &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                       &sk LGUI      &u_lt 4 SPACE     &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC       &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -95,8 +95,8 @@
             bindings = <
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &kp W  &kp F             &kp P          &kp B                           &kp J                          &kp L         &kp U              &kp Y           &mt AMPS SQT    &kp BACKSPACE
 &u_caps_word     &kp A          &kp R  &u_mt LEFT_ALT S  &kp T          &kp G                           &kp M                          &kp N         &u_mt RIGHT_ALT E  &kp I           &kp O           &mt RCTRL MINUS
-&sk LEFT_SHIFT   &u_lt 6 Z      &kp X  &kp C             &kp D          &u_mt LS(LA(LC(LEFT_GUI))) V    &u_mt RS(RA(RC(RIGHT_GUI))) K  &kp H         &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                       &sk LEFT_GUI      &u_lt 4 SPACE  &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC  &to 2
+&sk LEFT_SHIFT   &u_lt 6 Z      &kp X  &kp C             &kp D          &u_mt LS(LA(LC(LGUI))) V    &u_mt RS(RA(RC(RIGHT_GUI))) K  &kp H         &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                       &sk LGUI      &u_lt 4 SPACE  &u_lt 5 TAB                     &u_lt 2 RET                    &u_lt 3 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -123,7 +123,7 @@
                           &kp DOT  &kp N0  &kp MINUS    &none  &to 0          &to 4
             >;
 
-            sensor-bindings = <&inc_dec_kp LEFT_GUI(LS(Z)) LEFT_GUI(Z)>;
+            sensor-bindings = <&inc_dec_kp LG(LS(Z)) LG(Z)>;
         };
 
         NAV {
@@ -131,18 +131,18 @@
             bindings = <
 &kp LEFT_COMMAND  &bootloader  &none             &kp LA(LS(UP_ARROW))  &u_to_U_BASE       &none            &none    &none          &kp UP         &none              &kp LA(LG(LEFT))  &kp RA(RG(RIGHT))
 &kp LEFT_ALT      &kp HOME     &kp LA(LS(LEFT))  &kp LA(LS(DOWN))      &kp LA(LS(RIGHT))  &kp PAGE_UP      &none    &kp LEFT       &kp DOWN       &kp RIGHT          &none             &u_mt RG(RIGHT_ALT) RG(RA(ENTER))
-&kp LEFT_SHIFT    &kp END      &kp LEFT_CONTROL  &kp LEFT_ALT          &kp LEFT_GUI       &kp PAGE_DOWN    &none    &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RSHIFT        &to 1
+&kp LEFT_SHIFT    &kp END      &kp LEFT_CONTROL  &kp LEFT_ALT          &kp LGUI       &kp PAGE_DOWN    &none    &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RSHIFT        &to 1
                                                  &none                 &none              &none            &kp RET  &to 0          &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp LEFT_GUI(TAB) LEFT_GUI(LS(TAB))>;
+            sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
         };
 
         MEDIA {
             label = "Media";
             bindings = <
 &none  &bootloader     &none             &u_to_U_EXTRA  &u_to_U_BASE   &none    &u_out_tog         &none        &kp C_VOL_UP  &none        &none        &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI   &none    &ext_power EP_TOG  &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   &none        &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LGUI   &none    &ext_power EP_TOG  &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   &none        &none
 &none  &none           &kp RALT          &u_to_U_FUN    &u_to_U_MEDIA  &none    &u_bt_sel_0        &u_bt_sel_1  &u_bt_sel_2   &u_bt_sel_3  &u_bt_sel_4  &none
                                          &none          &none          &none    &kp C_STOP         &kp C_PP     &kp C_MUTE
             >;
@@ -655,7 +655,7 @@
         u_macro_meh_key: u_macro_meh_key {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LEFT_GUI)))>;
+            bindings = <&kp LS(LA(LC(LGUI)))>;
             label = "U_MACRO_MEH_KEY";
         };
     };
