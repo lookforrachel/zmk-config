@@ -39,11 +39,6 @@
             key-positions = <1 10>;
         };
 
-        u_combo_playpause {
-            bindings = <&kp C_PLAY_PAUSE>;
-            key-positions = <25 27>;
-        };
-
         u_combo_volup {
             bindings = <&kp C_VOL_UP>;
             key-positions = <10 22>;
@@ -54,24 +49,14 @@
             key-positions = <22 34>;
         };
 
-        u_combo_left {
-            bindings = <&kp LEFT>;
-            key-positions = <32 31>;
-        };
-
-        u_combo_right {
-            bindings = <&kp RIGHT>;
-            key-positions = <33 32>;
-        };
-
-        u_combo_up {
-            bindings = <&kp UP>;
-            key-positions = <16 17>;
-        };
-
-        u_combo_down {
-            bindings = <&kp DOWN>;
+        u_combo_playpause {
+            bindings = <&kp C_PLAY_PAUSE>;
             key-positions = <28 29>;
+        };
+
+        u_combo_search_selected {
+            bindings = <&u_macro_search_selected>;
+            key-positions = <16 17>;
         };
     };
 
@@ -81,10 +66,10 @@
         QWERTY {
             label = "QWERTY";
             bindings = <
-&u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W   &kp E             &kp R             &kp T                       &kp Y                          &kp U              &kp I              &u_lt 5 O       &u_lt 4 P         &kp BACKSPACE
-&u_caps_word     &kp A          &kp S       &u_mt LEFT_ALT D  &u_mt LGUI F      &kp G                       &kp H                          &u_mt RGUI J       &u_mt RALT K       &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
-&sk LEFT_SHIFT   &kp Z          &kp X       &kp C             &kp V             &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N       &kp M              &u_mt BSLH COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                            &sk LGUI          &u_lt 2 SPACE     &u_lt 5 TAB                 &u_lt 4 RET                    &u_lt 3 BSPC       &to 2
+&u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp E             &kp R          &kp T                       &kp Y                     &kp U         &kp I             &u_lt 5 O       &u_lt 4 P         &kp BACKSPACE
+&u_caps_word     &kp A          &kp S      &u_mt LEFT_ALT D  &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K      &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
+&sk LEFT_SHIFT   &kp Z          &kp X      &kp C             &kp V          &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &kp M         &u_mt BSLH COMMA  &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                           &sk LGUI          &u_lt 2 SPACE  &u_lt 5 TAB                 &u_lt 4 RET               &u_lt 3 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -93,10 +78,10 @@
         COLEMAK {
             label = "Colemak";
             bindings = <
-&u_mt ESC GRAVE  &u_mt LC(C) Q  &kp W  &kp F             &kp P          &kp B                           &kp J                          &kp L         &u_lt 2 U          &u_lt 5 Y       &u_lt 4 SQT     &kp BACKSPACE
-&u_caps_word     &kp A          &kp R  &u_mt LEFT_ALT S  &kp T          &kp G                           &kp M                          &kp N         &u_mt RALT E       &kp I           &u_mt AMPS O    &mt RCTRL MINUS
-&sk LEFT_SHIFT   &u_lt 6 Z      &kp X  &kp C             &kp D          &u_mt LS(LA(LC(LGUI))) V        &u_mt RS(RA(RC(RGUI))) K       &kp H         &u_mt BSLH COMMA   &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                       &sk LGUI          &u_lt 2 SPACE  &u_lt 5 TAB                     &u_lt 4 RET                    &u_lt 3 BSPC  &to 2
+&u_mt ESC GRAVE  &u_mt LC(C) Q  &kp W  &kp F             &kp P          &kp B                       &kp J                     &kp L         &u_lt 2 U         &u_lt 5 Y       &u_lt 4 SQT     &kp BACKSPACE
+&u_caps_word     &kp A          &kp R  &u_mt LEFT_ALT S  &kp T          &kp G                       &kp M                     &kp N         &u_mt RALT E      &kp I           &u_mt AMPS O    &mt RCTRL MINUS
+&sk LEFT_SHIFT   &u_lt 6 Z      &kp X  &kp C             &kp D          &u_mt LS(LA(LC(LGUI))) V    &u_mt RS(RA(RC(RGUI))) K  &kp H         &u_mt BSLH COMMA  &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                       &sk LGUI          &u_lt 2 SPACE  &u_lt 5 TAB                 &u_lt 4 RET               &u_lt 3 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -105,10 +90,10 @@
         NAV {
             label = "Nav";
             bindings = <
-&kp LEFT_COMMAND  &bootloader  &none             &kp LA(LS(UP_ARROW))  &u_to_U_BASE       &none            &none    &none          &kp UP         &none              &kp LA(LG(LEFT))  &kp BACKSPACE
-&kp LEFT_ALT      &kp HOME     &kp LA(LS(LEFT))  &kp LA(LS(DOWN))      &kp LA(LS(RIGHT))  &kp PAGE_UP      &none    &kp LEFT       &kp DOWN       &kp RIGHT          &none             &u_mt RG(RALT) RG(RA(ENTER))
-&kp LEFT_SHIFT    &kp END      &kp LEFT_CONTROL  &kp LEFT_ALT          &kp LGUI       &kp PAGE_DOWN        &none    &kp RGUI       &kp RALT       &kp RCTRL          &kp RSHIFT        &to 1
-                                                 &none                 &none              &none            &kp RET  &to 0          &to 3
+&kp LEFT_COMMAND  &bootloader  &none             &kp LA(LS(UP_ARROW))  &u_to_U_BASE       &none            &none    &none     &kp UP    &none      &kp LA(LG(LEFT))  &kp BACKSPACE
+&kp LEFT_ALT      &kp HOME     &kp LA(LS(LEFT))  &kp LA(LS(DOWN))      &kp LA(LS(RIGHT))  &kp PAGE_UP      &none    &kp LEFT  &kp DOWN  &kp RIGHT  &none             &u_mt RG(RALT) RG(RA(ENTER))
+&kp LEFT_SHIFT    &kp END      &kp LEFT_CONTROL  &kp LEFT_ALT          &kp LGUI           &kp PAGE_DOWN    &none    &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT        &to 1
+                                                 &none                 &none              &none            &kp RET  &to 0     &to 3
             >;
 
             sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
@@ -117,10 +102,10 @@
         NUM {
             label = "Num";
             bindings = <
-&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE   &u_to_U_EXTRA  &none              &bootloader      &kp DEL
-&none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RGUI       &kp RALT       &kp RCTRL          &kp RSHFT        &none
-&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp SLASH    &none  &u_to_U_NUM    &u_to_U_NAV    &kp RALT           &none            &to 1
-                          &kp DOT  &kp N0  &kp MINUS    &none  &to 0          &to 4
+&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE  &u_to_U_EXTRA  &none      &bootloader  &kp DEL
+&none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RGUI      &kp RALT       &kp RCTRL  &kp RSHFT    &none
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp SLASH    &none  &u_to_U_NUM   &u_to_U_NAV    &kp RALT   &none        &to 1
+                          &kp DOT  &kp N0  &kp MINUS    &none  &to 0         &to 4
             >;
 
             sensor-bindings = <&inc_dec_kp LG(LS(Z)) LG(Z)>;
@@ -129,9 +114,9 @@
         SYM {
             label = "Sym";
             bindings = <
-&none  &kp LBRC   &kp AMPS  &kp ASTRK          &kp BSLH                &kp RBRC     &u_macro_curly_brackets  &kp LBKT         &kp C          &kp RBKT                  &bootloader      &kp DEL
-&none  &kp COLON  &kp DLLR  &kp PRCNT          &kp CARET               &kp PLUS     &u_macro_sq_brackets     &u_mt LGUI LPAR  &kp RALT       &u_mt RCTRL RPAR          &kp RSHFT        &none
-&none  &kp TILDE  &kp EXCL  &kp AT             &kp HASH                &kp PIPE     &u_macro_single_quotes   &kp LBRC         &none          &kp RBRC                  &none            &to 1
+&none  &kp LBRC   &kp AMPS  &kp ASTRK          &kp BSLH                &kp RBRC     &u_macro_curly_brackets  &kp LBKT         &kp C     &kp RBKT          &bootloader  &kp DEL
+&none  &kp COLON  &kp DLLR  &kp PRCNT          &kp CARET               &kp PLUS     &u_macro_sq_brackets     &u_mt LGUI LPAR  &kp RALT  &u_mt RCTRL RPAR  &kp RSHFT    &none
+&none  &kp TILDE  &kp EXCL  &kp AT             &kp HASH                &kp PIPE     &u_macro_single_quotes   &kp LBRC         &none     &kp RBRC          &none        &to 1
                             &u_macro_brackets  &u_macro_double_quotes  &kp UNDER    &to 2                    &to 0            &to 5
             >;
 
@@ -652,11 +637,11 @@
             label = "U_MACRO_SELECT_ALL";
         };
 
-        u_macro_meh_key: u_macro_meh_key {
+        u_macro_search_selected: u_macro_search_selected {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LGUI)))>;
-            label = "U_MACRO_MEH_KEY";
+            bindings = <&kp LG(C) &kp LG(F) &kp LG(V)>;
+            label = "U_MACRO_SEARCH_SELECTED";
         };
     };
 };
@@ -681,47 +666,11 @@
             bindings = <&mo>, <&kp>;
         };
 
-        u_macro_zoom: u_macro_zoom {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MACRO_ZOOM";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_app_zoom>, <&kp>;
-        };
-
-        u_macro_zoom_mic: u_macro_zoom_mic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MACRO_ZOOM_MIC";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_app_zoom_mic>, <&kp>;
-        };
-
-        u_macro_zoom_end: u_macro_zoom_end {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MACRO_ZOOM_END";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_app_close_window>, <&kp>;
-        };
-
         u_comma_inner_morph: u_comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "U_COMMA_INNER_MORPH";
             #binding-cells = <0>;
             bindings = <&kp LESS_THAN>, <&kp LEFT_BRACE>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        u_dot_inner_morph: u_dot_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_INNER_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp GREATER_THAN>, <&kp RIGHT_BRACE>;
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
@@ -733,69 +682,6 @@
             bindings = <&kp COMMA>, <&u_comma_inner_morph>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_dot_morph: u_dot_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&u_dot_inner_morph>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_comma_ctrl_inner_morph: u_comma_ctrl_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_COMMA_CTRL_INNER_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LEFT_BRACKET>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        u_dot_ctrl_inner_morph: u_dot_ctrl_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_CTRL_INNER_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp RBKT>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        u_qmark_slash_morph: u_qmark_slash_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_QMARK_SLASH_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp SLASH>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_dot_ctrl_morph: u_dot_ctrl_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_CTRL_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&u_dot_ctrl_inner_morph>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        u_qmark_tap_kp_hold: u_qmark_tap_kp_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_QMARK_TAP_KP_HOLD";
-            bindings = <&kp>, <&u_qmark_slash_morph>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <1>;
-        };
-
-        u_meh_key: u_meh_key {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MEH_KEY";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_meh_key>, <&kp>;
         };
     };
 };
