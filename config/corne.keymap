@@ -64,7 +64,7 @@
         compatible = "zmk,keymap";
 
         QWERTY {
-            label = "QWERTY";
+            display-name = "QWERTY";
             bindings = <
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp E             &kp R          &kp T                       &kp Y                     &kp U         &kp I             &u_lt 5 O       &u_lt 4 P         &kp BACKSPACE
 &u_caps_word     &kp A          &kp S      &u_mt LEFT_ALT D  &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K      &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
@@ -76,7 +76,7 @@
         };
 
         COLEMAK {
-            label = "Colemak";
+            display-name = "Colemak";
             bindings = <
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &kp W  &kp F             &kp P          &kp B                       &kp J                     &kp L         &u_lt 2 U         &u_lt 5 Y       &u_lt 4 SQT     &kp BACKSPACE
 &u_caps_word     &kp A          &kp R  &u_mt LEFT_ALT S  &kp T          &kp G                       &kp M                     &kp N         &u_mt RALT E      &kp I           &u_mt AMPS O    &mt RCTRL MINUS
@@ -88,7 +88,7 @@
         };
 
         NAV {
-            label = "Nav";
+            display-name = "Nav";
             bindings = <
 &kp LEFT_COMMAND  &bootloader  &none             &kp LA(LS(UP_ARROW))  &u_to_U_BASE       &none            &none    &none     &kp UP    &none      &kp LA(LG(LEFT))  &kp BACKSPACE
 &kp LEFT_ALT      &kp HOME     &kp LA(LS(LEFT))  &kp LA(LS(DOWN))      &kp LA(LS(RIGHT))  &kp PAGE_UP      &none    &kp LEFT  &kp DOWN  &kp RIGHT  &none             &u_mt RG(RALT) RG(RA(ENTER))
@@ -100,7 +100,7 @@
         };
 
         NUM {
-            label = "Num";
+            display-name = "Num";
             bindings = <
 &none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &u_to_U_BASE  &u_to_U_EXTRA  &none      &bootloader  &kp DEL
 &none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RGUI      &kp RALT       &kp RCTRL  &kp RSHFT    &none
@@ -112,7 +112,7 @@
         };
 
         SYM {
-            label = "Sym";
+            display-name = "Sym";
             bindings = <
 &none  &kp LBRC   &kp AMPS  &kp ASTRK          &kp BSLH                &kp RBRC     &u_macro_curly_brackets  &kp LBKT         &kp C     &kp RBKT          &bootloader  &kp DEL
 &none  &kp COLON  &kp DLLR  &kp PRCNT          &kp CARET               &kp PLUS     &u_macro_sq_brackets     &u_mt LGUI LPAR  &kp RALT  &u_mt RCTRL RPAR  &kp RSHFT    &none
@@ -124,7 +124,7 @@
         };
 
         MEDIA {
-            label = "Media";
+            display-name = "Media";
             bindings = <
 &none           &bootloader     &none             &u_to_U_EXTRA  &u_to_U_BASE   &none    &u_out_tog         &kp C_MUTE   &kp C_VOL_UP  &none        &none        &none
 &none           &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LGUI       &none    &ext_power EP_TOG  &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   &none        &none
@@ -136,7 +136,7 @@
         };
 
         FUN {
-            label = "Fun";
+            display-name = "Fun";
             bindings = <
 &none  &bootloader            &u_macro_screenshot_all     &u_macro_screenshot                  &u_macro_screenshot_clipboard  &u_macro_screenshot_clipb_all    &none  &kp F7  &kp F8  &kp F9  &kp F12  &bootloader
 &none  &u_macro_string_ctask  &u_macro_string_work_email  &u_macro_string_lookforrachel_email  &u_macro_select_all_copy       &u_macro_select_all_cut          &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
@@ -152,7 +152,6 @@
 / {
     macros {
         u_macro_u_bt_sel_0: u_macro_u_bt_sel_0 {
-            label = "ZM_u_macro_u_bt_sel_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -165,7 +164,6 @@
     behaviors {
         u_bt_sel_0: u_bt_sel_0 {
             compatible = "zmk,behavior-mod-morph";
-            label = "u_bt_sel_0";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0>, <&u_macro_u_bt_sel_0>;
 
@@ -177,7 +175,6 @@
 / {
     macros {
         u_macro_u_bt_sel_1: u_macro_u_bt_sel_1 {
-            label = "ZM_u_macro_u_bt_sel_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -190,7 +187,6 @@
     behaviors {
         u_bt_sel_1: u_bt_sel_1 {
             compatible = "zmk,behavior-mod-morph";
-            label = "u_bt_sel_1";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1>, <&u_macro_u_bt_sel_1>;
 
@@ -202,7 +198,6 @@
 / {
     macros {
         u_macro_u_bt_sel_2: u_macro_u_bt_sel_2 {
-            label = "ZM_u_macro_u_bt_sel_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -215,7 +210,6 @@
     behaviors {
         u_bt_sel_2: u_bt_sel_2 {
             compatible = "zmk,behavior-mod-morph";
-            label = "u_bt_sel_2";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 2>, <&u_macro_u_bt_sel_2>;
 
@@ -227,7 +221,6 @@
 / {
     macros {
         u_macro_u_bt_sel_3: u_macro_u_bt_sel_3 {
-            label = "ZM_u_macro_u_bt_sel_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -240,7 +233,6 @@
     behaviors {
         u_bt_sel_3: u_bt_sel_3 {
             compatible = "zmk,behavior-mod-morph";
-            label = "u_bt_sel_3";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 3>, <&u_macro_u_bt_sel_3>;
 
@@ -252,7 +244,6 @@
 / {
     macros {
         u_macro_u_bt_sel_4: u_macro_u_bt_sel_4 {
-            label = "ZM_u_macro_u_bt_sel_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -265,7 +256,6 @@
     behaviors {
         u_bt_sel_4: u_bt_sel_4 {
             compatible = "zmk,behavior-mod-morph";
-            label = "u_bt_sel_4";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 4>, <&u_macro_u_bt_sel_4>;
 
@@ -278,7 +268,6 @@
     behaviors {
         u_out_tog: u_out_tog {
             compatible = "zmk,behavior-mod-morph";
-            label = "u_out_tog";
             #binding-cells = <0>;
             bindings = <&out OUT_TOG>, <&out OUT_USB>;
 
@@ -291,7 +280,6 @@
     behaviors {
         u_caps_word: u_caps_word {
             compatible = "zmk,behavior-mod-morph";
-            label = "u_caps_word";
             #binding-cells = <0>;
             bindings = <&caps_word>, <&kp CAPS>;
 
@@ -304,7 +292,6 @@
     behaviors {
         u_to_U_BASE: u_to_U_BASE {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_BASE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 1>;
@@ -316,7 +303,6 @@
     behaviors {
         u_to_U_EXTRA: u_to_U_EXTRA {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_EXTRA";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 0>;
@@ -328,7 +314,6 @@
     behaviors {
         u_to_U_TAP: u_to_U_TAP {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 0>;
@@ -340,7 +325,6 @@
     behaviors {
         u_to_U_BUTTON: u_to_U_BUTTON {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_BUTTON";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 0>;
@@ -352,7 +336,6 @@
     behaviors {
         u_to_U_NAV: u_to_U_NAV {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_NAV";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 5>;
@@ -364,7 +347,6 @@
     behaviors {
         u_to_U_MOUSE: u_to_U_MOUSE {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_MOUSE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 0>;
@@ -376,7 +358,6 @@
     behaviors {
         u_to_U_MEDIA: u_to_U_MEDIA {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_MEDIA";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 6>;
@@ -388,7 +369,6 @@
     behaviors {
         u_to_U_NUM: u_to_U_NUM {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_NUM";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 3>;
@@ -400,7 +380,6 @@
     behaviors {
         u_to_U_SYM: u_to_U_SYM {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_SYM";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 4>;
@@ -412,7 +391,6 @@
     behaviors {
         u_to_U_FUN: u_to_U_FUN {
             compatible = "zmk,behavior-tap-dance";
-            label = "u_to_U_FUN";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to 0>;
@@ -423,7 +401,6 @@
 / {
     macros {
         u_macro_btn1: u_macro_btn1 {
-            label = "ZM_u_macro_btn1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -435,7 +412,6 @@
 / {
     macros {
         u_macro_btn2: u_macro_btn2 {
-            label = "ZM_u_macro_btn2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -447,7 +423,6 @@
 / {
     macros {
         u_macro_btn3: u_macro_btn3 {
-            label = "ZM_u_macro_btn3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -458,42 +433,36 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp R &kp Y &kp E &kp E &kp AT &kp H &kp E &kp A &kp L &kp T &kp H &kp F &kp I &kp R &kp S &kp T &kp DOT &kp O &kp R &kp G>;
-            label = "U_MACRO_STRING_WORK_EMAIL";
         };
 
         u_macro_string_lookforrachel_email: u_macro_string_lookforrachel_email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp L &kp O &kp O &kp K &kp F &kp O &kp R &kp DOT &kp R &kp A &kp C &kp H &kp E &kp L &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-            label = "U_MACRO_STRING_LOOKFORRACHEL_EMAIL";
         };
 
         u_macro_string_ctask: u_macro_string_ctask {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LS(S) &kp E &kp R &kp V &kp E &kp R &kp L &kp E &kp S &kp S &kp SPACE &kp LS(C) &kp LS(D) &kp SPACE &kp D &kp E &kp P &kp L &kp O &kp Y &kp SPACE>;
-            label = "U_MACRO_STRING_CTASK";
         };
 
         u_macro_app_zoom: u_macro_app_zoom {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LG(LA(LC(LS(Z))))>;
-            label = "U_MACRO_APP_ZOOM";
         };
 
         u_macro_app_zoom_mic: u_macro_app_zoom_mic {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&u_macro_app_zoom &kp LG(LS(A))>;
-            label = "U_MACRO_APP_ZOOM_MIC";
         };
 
         u_macro_app_close_window: u_macro_app_close_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(W) &kp ENTER>;
-            label = "U_MACRO_APP_CLOSE_WINDOW";
             wait-ms = <500>;
         };
 
@@ -501,147 +470,126 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp R &kp Y &kp E &kp E>;
-            label = "U_MACRO_STRING_RYEE";
         };
 
         u_macro_string_name: u_macro_string_name {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LS(R) &kp A &kp C &kp H &kp E &kp L &kp SPACE &kp LS(Y) &kp E &kp E>;
-            label = "U_MACRO_STRING_NAME";
         };
 
         u_macro_select_all_cut: u_macro_select_all_cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(A) &kp LG(X)>;
-            label = "U_MACRO_SELECT_ALL_CUT";
         };
 
         u_macro_screenshot_clipboard: u_macro_screenshot_clipboard {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LG(LC(LS(NUMBER_4)))>;
-            label = "U_MACRO_SCREENSHOT_CLIPBOARD";
         };
 
         u_macro_screenshot_clipb_all: u_macro_screenshot_clipb_all {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(LC(LS(NUMBER_3)))>;
-            label = "U_MACRO_SCREENSHOT_CLIPB_ALL";
         };
 
         u_macro_screenshot: u_macro_screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(LS(NUMBER_4))>;
-            label = "U_MACRO_SCREENSHOT";
         };
 
         u_macro_screenshot_all: u_macro_screenshot_all {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(LS(NUMBER_3))>;
-            label = "U_MACRO_SCREENSHOT_ALL";
         };
 
         u_macro_select_all_copy: u_macro_select_all_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(A) &kp LG(C)>;
-            label = "U_MACRO_SELECT_ALL_COPY";
         };
 
         u_macro_brackets: u_macro_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
-            label = "U_MACRO_BRACKETS";
         };
 
         u_macro_sq_brackets: u_macro_sq_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBKT &kp RBKT &kp LEFT_ARROW>;
-            label = "U_MACRO_SQ_BRACKETS";
         };
 
         u_macro_curly_brackets: u_macro_curly_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBRC &kp RBRC &kp LEFT_ARROW>;
-            label = "U_MACRO_CURLY_BRACKETS";
         };
 
         u_macro_angled_brackets: u_macro_angled_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LT &kp GT &kp LEFT_ARROW>;
-            label = "U_MACRO_ANGLED_BRACKETS";
         };
 
         u_macro_double_quotes: u_macro_double_quotes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DQT &kp DQT &kp LEFT_ARROW>;
-            label = "U_MACRO_DOUBLE_QUOTES";
         };
 
         u_macro_single_quotes: u_macro_single_quotes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp SQT &kp LEFT_ARROW>;
-            label = "U_MACRO_SINGLE_QUOTES";
         };
 
         u_macro_undo: u_macro_undo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(Z)>;
-            label = "U_MACRO_UNDO";
         };
 
         u_macro_redo: u_macro_redo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(LS(Z))>;
-            label = "U_MACRO_REDO";
         };
 
         u_macro_cut: u_macro_cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(X)>;
-            label = "U_MACRO_CUT";
         };
 
         u_macro_copy: u_macro_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(C)>;
-            label = "U_MACRO_COPY";
         };
 
         u_macro_paste: u_macro_paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(V)>;
-            label = "U_MACRO_PASTE";
         };
 
         u_macro_select_all: u_macro_select_all {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(A)>;
-            label = "U_MACRO_SELECT_ALL";
         };
 
         u_macro_search_selected: u_macro_search_selected {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(C) &kp LG(F) &kp LG(V)>;
-            label = "U_MACRO_SEARCH_SELECTED";
         };
     };
 };
@@ -650,7 +598,6 @@
     behaviors {
         u_mt: u_mt {
             compatible = "zmk,behavior-hold-tap";
-            label = "u_mt";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
@@ -659,7 +606,6 @@
 
         u_lt: u_lt {
             compatible = "zmk,behavior-hold-tap";
-            label = "u_lt";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
@@ -668,7 +614,6 @@
 
         u_comma_inner_morph: u_comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "U_COMMA_INNER_MORPH";
             #binding-cells = <0>;
             bindings = <&kp LESS_THAN>, <&kp LEFT_BRACE>;
 
@@ -677,7 +622,6 @@
 
         u_comma_morph: u_comma_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "U_COMMA_MORPH";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&u_comma_inner_morph>;
 
