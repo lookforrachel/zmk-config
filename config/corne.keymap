@@ -666,47 +666,11 @@
             bindings = <&mo>, <&kp>;
         };
 
-        u_macro_zoom: u_macro_zoom {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MACRO_ZOOM";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_app_zoom>, <&kp>;
-        };
-
-        u_macro_zoom_mic: u_macro_zoom_mic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MACRO_ZOOM_MIC";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_app_zoom_mic>, <&kp>;
-        };
-
-        u_macro_zoom_end: u_macro_zoom_end {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MACRO_ZOOM_END";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_app_close_window>, <&kp>;
-        };
-
         u_comma_inner_morph: u_comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "U_COMMA_INNER_MORPH";
             #binding-cells = <0>;
             bindings = <&kp LESS_THAN>, <&kp LEFT_BRACE>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        u_dot_inner_morph: u_dot_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_INNER_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp GREATER_THAN>, <&kp RIGHT_BRACE>;
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
@@ -718,69 +682,6 @@
             bindings = <&kp COMMA>, <&u_comma_inner_morph>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_dot_morph: u_dot_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&u_dot_inner_morph>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_comma_ctrl_inner_morph: u_comma_ctrl_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_COMMA_CTRL_INNER_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LEFT_BRACKET>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        u_dot_ctrl_inner_morph: u_dot_ctrl_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_CTRL_INNER_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp RBKT>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        u_qmark_slash_morph: u_qmark_slash_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_QMARK_SLASH_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp SLASH>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_dot_ctrl_morph: u_dot_ctrl_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOT_CTRL_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&u_dot_ctrl_inner_morph>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        u_qmark_tap_kp_hold: u_qmark_tap_kp_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_QMARK_TAP_KP_HOLD";
-            bindings = <&kp>, <&u_qmark_slash_morph>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <1>;
-        };
-
-        u_meh_key: u_meh_key {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_MEH_KEY";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&u_macro_meh_key>, <&kp>;
         };
     };
 };
