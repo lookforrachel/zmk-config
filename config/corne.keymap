@@ -14,7 +14,7 @@
             bindings = <
 &u_mt ESC GRAVE     &u_mt LC(C) Q           &u_lt 6 W           &kp E                       &kp R                       &kp T                           &kp Y                       &kp U           &u_lt 5 I           &kp O           &u_lt 3 P               &kp BACKSPACE
 &u_caps_word        &kp A                   &kp S               &u_mt LALT D                &u_mt LGUI F                &kp G                           &kp H                       &u_mt RGUI J    &u_mt RALT K        &kp L           &u_mt AMPS SQT          &u_mt RCTRL MINUS
-&skq LSHFT          &kp Z                   &kp X               &kp C                       &kp V                       &u_mt LS(LA(LC(LGUI))) B        &u_mt RS(RA(RC(RGUI))) N    &kp M           &u_mt BSLH COMMA    &u_mt SEMI DOT  &u_mt EXCL SLASH        u_mt RSHIFT EQUAL
+&skq LSHFT          &kp Z                   &kp X               &kp C                       &kp V                       &u_mt LS(LA(LC(LGUI))) B        &u_mt RS(RA(RC(RGUI))) N    &kp M           &u_mt BSLH COMMA    &u_mt SEMI DOT  &u_mt EXCL SLASH        &u_mt RSHIFT EQUAL
                                                                 &sk LGUI                    &u_lt 4 SPACE               &u_lt 5 TAB                     &u_lt 3 RET                 &u_lt 2 BSPC    &to 2
             >;
 
