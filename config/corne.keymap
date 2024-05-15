@@ -42,7 +42,7 @@
                                                                 &kp N0                      &kp SPACE                   &kp MINUS                        &kp RET                    &to 0           &to 3
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&volknob>;
         };
 
         SYM {
@@ -541,6 +541,13 @@
             release-after-ms = <1000>;
             quick-release;
             ignore-modifiers;
+          };
+
+          volknob: volume_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_VOLUME_KNOB";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
           };
     };
 };
