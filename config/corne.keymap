@@ -13,10 +13,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp E         &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I         &kp O           &u_lt 3 P         &kp BACKSPACE
-&u_caps_word     &kp A          &kp S      &u_mt LALT D  &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K      &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
-&skq LSHFT       &kp Z          &kp X      &kp C         &kp V          &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &kp M         &u_mt BSLH COMMA  &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                           &sk LGUI      &u_lt 4 SPACE  &u_lt 5 TAB                 &u_lt 3 RET               &u_lt 2 BSPC  &to 2
+&u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp E         &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O           &kp P             &kp BACKSPACE
+&u_mt LCTRL TAB  &kp A          &kp S      &u_mt LALT D  &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
+&kt LSHFT        &kp Z          &kp X      &kp C         &kp V          &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &u_lt 2 M     &lt 3 COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                           &sk LGUI      &u_lt 4 SPACE  &u_lt 5 CAPS                &u_lt 3 RET               &u_lt 2 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -25,10 +25,10 @@
         COLEMAK {
             display-name = "Colemak";
             bindings = <
-&u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp F         &kp P          &kp B                       &kp J                     &kp L         &u_lt 5 U         &kp Y           &u_lt 3 SQT     &kp BACKSPACE
-&u_caps_word     &kp A          &kp R      &u_mt LALT S  &kp T          &kp G                       &kp M                     &kp N         &u_mt RALT E      &kp I           &u_mt AMPS O    &mt RCTRL MINUS
-&skq LSHFT       &kp Z          &kp X      &kp C         &kp D          &u_mt LS(LA(LC(LGUI))) V    &u_mt RS(RA(RC(RGUI))) K  &kp H         &u_mt BSLH COMMA  &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                           &sk LGUI      &u_lt 4 SPACE  &u_lt 5 TAB                 &u_lt 3 RET               &u_lt 2 BSPC  &to 2
+&u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp F         &kp P          &kp B                       &kp J                     &kp L         &u_lt 5 U      &kp Y           &kp SQT         &kp BACKSPACE
+&u_mt LCTRL TAB  &kp A          &kp R      &u_mt LALT S  &kp T          &kp G                       &kp M                     &kp N         &u_mt RALT E   &kp I           &u_mt AMPS O    &mt RCTRL MINUS
+&kt LSHFT        &kp Z          &kp X      &kp C         &kp D          &u_mt LS(LA(LC(LGUI))) V    &u_mt RS(RA(RC(RGUI))) K  &u_lt 2 H     &u_lt 3 COMMA  &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                           &sk LGUI      &u_lt 4 SPACE  &u_lt 5 CAPS                &u_lt 3 RET               &u_lt 2 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -37,10 +37,10 @@
         NUM {
             display-name = "Num";
             bindings = <
-&kt LGUI   &kp LBKT   &kp N7  &kp N8  &kp N9     &kp RBKT     &kp LPAR  &kp RPAR  &kp UP    &none      &bootloader  &kp DEL
-&kt LALT   &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHFT    &kt RCTRL
-&kt LSHFT  &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &to 4     &to 5     &to 6     &kp DOT    &trans       &trans
-                              &kp N0  &kp SPACE  &kp MINUS    &kp RET   &to 0     &to 3
+&kp LGUI  &kp LBKT   &kp N7  &kp N8  &kp N9     &kp RBKT     &kp LPAR  &kp RPAR  &kp UP    &none      &bootloader  &kp DEL
+&kp LALT  &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHFT    &kt RCTRL
+&trans    &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &to 4     &to 5     &to 6     &kp DOT    &trans       &trans
+                             &kp N0  &kp SPACE  &kp MINUS    &kp RET   &to 0     &to 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -49,10 +49,10 @@
         SYM {
             display-name = "Sym";
             bindings = <
-&kt LGUI   &kp BSLH   &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR     &u_macro_sq_bkt  &kp LBKT  &kp C         &kp RBKT  &bootloader  &kp DEL
-&kt LALT   &kp COLON  &kp DLLR  &kp PRCNT     &kp CARET     &kp PLUS     &u_macro_c_bkt   &kp LBRC  &u_macro_grv  &kp RBRC  &kp SQT      &kt RCTRL
-&kt LSHFT  &kp TILDE  &kp EXCL  &kp AT        &kp HASH      &kp PIPE     &u_macro_bkt     &kp LPAR  &kp SEMI      &kp RPAR  &kp DQT      &trans
-                                &u_macro_sqt  &u_macro_dqt  &kp UNDER    &kp RET          &to 0     &to 4
+&kp LGUI  &kp BSLH   &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR     &u_macro_sq_bkt  &kp LBKT  &kp C         &kp RBKT  &bootloader  &kp DEL
+&kp LALT  &kp COLON  &kp DLLR  &kp PRCNT     &kp CARET     &kp PLUS     &u_macro_c_bkt   &kp LBRC  &u_macro_grv  &kp RBRC  &kp SQT      &kt RCTRL
+&trans    &kp TILDE  &kp EXCL  &kp AT        &kp HASH      &kp PIPE     &u_macro_bkt     &kp LPAR  &kp SEMI      &kp RPAR  &kp DQT      &trans
+                               &u_macro_sqt  &u_macro_dqt  &kp UNDER    &kp RET          &to 0     &to 4
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
@@ -61,10 +61,10 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&kt LGUI   &bootloader  &none             &kp LA(LS(UP))    &none              &none            &none    &none     &kp UP    &none      &kp LA(LG(LEFT))  &kp BACKSPACE
-&kt LALT   &kp HOME     &kp LA(LS(LEFT))  &kp LA(LS(DOWN))  &kp LA(LS(RIGHT))  &kp PAGE_UP      &none    &kp LEFT  &kp DOWN  &kp RIGHT  &none             &u_mt RG(RALT) RG(RA(ENTER))
-&kt LSHFT  &kp END      &kp LEFT_CONTROL  &kp LEFT_ALT      &kp LGUI           &kp PAGE_DOWN    &none    &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT        &to 1
-                                          &none             &none              &none            &kp RET  &to 0     &to 5
+&kp LGUI  &bootloader  &none             &kp LA(LS(UP))    &none              &none            &none    &none     &kp UP    &none      &kp LA(LG(LEFT))  &kp BACKSPACE
+&kp LALT  &kp HOME     &kp LA(LS(LEFT))  &kp LA(LS(DOWN))  &kp LA(LS(RIGHT))  &kp PAGE_UP      &none    &kp LEFT  &kp DOWN  &kp RIGHT  &none             &u_mt RG(RALT) RG(RA(ENTER))
+&trans    &kp END      &kp LEFT_CONTROL  &kp LEFT_ALT      &kp LGUI           &kp PAGE_DOWN    &none    &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT        &to 1
+                                         &none             &none              &none            &kp RET  &to 0     &to 5
             >;
 
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
