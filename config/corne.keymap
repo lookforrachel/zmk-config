@@ -16,7 +16,7 @@
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp E         &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O           &kp P             &kp BACKSPACE
 &u_sshlck        &kp A          &kp S      &u_mt LALT D  &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
 &u_mt LCTRL TAB  &kp Z          &kp X      &kp C         &kp V          &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &u_lt 2 M     &lt 3 COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                           &sk LGUI      &u_lt 4 SPACE  &u_lt_caps_word 5 0         &u_lt 3 RET               &u_lt 2 BSPC  &to 2
+                                           &sk LGUI      &u_lt 4 SPACE  &u_lt_caps_word 5           &u_lt 3 RET               &u_lt 2 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
