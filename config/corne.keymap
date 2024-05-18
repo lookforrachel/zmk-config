@@ -13,10 +13,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&u_mt ESC GRAVE              &u_mt LC(C) Q  &u_lt 6 W   &kp E         &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O           &kp P             &kp BACKSPACE
-&u_sshlck                    &kp A          &kp S       &u_mt LALT D  &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
-&u_mt LCTRL C_PLAY_PAUSE     &kp Z          &kp X       &kp C         &kp V          &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &u_lt 2 M     &lt 3 COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
-                                                        &sk LGUI      &u_lt 4 SPACE  &u_lt 5 TAB                 &u_lt 3 RET               &u_lt 2 BSPC  &to 2
+&u_mt ESC GRAVE           &u_mt LC(C) Q  &u_lt 6 W  &kp E         &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O           &kp P             &kp BACKSPACE
+&u_sshlck                 &kp A          &kp S      &u_mt LALT D  &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L           &u_mt AMPS SQT    &u_mt RCTRL MINUS
+&u_mt LCTRL C_PLAY_PAUSE  &kp Z          &kp X      &kp C         &kp V          &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &u_lt 2 M     &lt 3 COMMA   &u_mt SEMI DOT  &u_mt EXCL SLASH  &u_mt RSHIFT EQUAL
+                                                    &sk LGUI      &u_lt 4 SPACE  &u_lt 5 TAB                 &u_lt 3 RET               &u_lt 2 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -38,7 +38,7 @@
             display-name = "Num";
             bindings = <
 &kp LGUI  &kp LBKT   &kp N7  &kp N8  &kp N9     &kp RBKT     &kp LPAR  &kp RPAR  &kp UP    &none      &bootloader  &kp DEL
-&trans    &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHFT    &kt RCTRL
+&trans    &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHFT    &kp RCTRL
 &trans    &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &to 4     &to 5     &to 6     &kp DOT    &trans       &trans
                              &kp N0  &kp SPACE  &kp MINUS    &kp RET   &to 0     &to 3
             >;
@@ -50,7 +50,7 @@
             display-name = "Sym";
             bindings = <
 &kp LGUI  &kp BSLH   &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR     &u_macro_sq_bkt  &kp LBKT  &kp C         &kp RBKT  &bootloader  &kp DEL
-&trans    &kp COLON  &kp DLLR  &kp PRCNT     &kp CARET     &kp PLUS     &u_macro_c_bkt   &kp LBRC  &u_macro_grv  &kp RBRC  &kp SQT      &kt RCTRL
+&trans    &kp COLON  &kp DLLR  &kp PRCNT     &kp CARET     &kp PLUS     &u_macro_c_bkt   &kp LBRC  &u_macro_grv  &kp RBRC  &kp SQT      &kp RCTRL
 &trans    &kp TILDE  &kp EXCL  &kp AT        &kp HASH      &kp PIPE     &u_macro_bkt     &kp LPAR  &kp SEMI      &kp RPAR  &kp DQT      &trans
                                &u_macro_sqt  &u_macro_dqt  &kp UNDER    &kp RET          &to 0     &to 4
             >;
@@ -92,6 +92,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 
