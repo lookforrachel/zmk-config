@@ -12,10 +12,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&u_mt ESC GRAVE       &u_mt LC(C) Q  &u_lt 6 W      &kp E          &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O           &kp P              &kp BACKSPACE
-&u_mt LCTRL TAB       &kp A          &kp S          &u_mt LALT D   &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L           &u_mt AMPS SQT     &u_mt RCTRL MINUS
-&u_lt 5 C_PLAY_PAUSE  &u_mt LG(Z) Z  &u_mt LG(X) X  &u_mt LG(C) C  &u_mt LG(V) V  &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &u_lt 2 M     &lt 3 COMMA   &u_mt EXCL DOT  &u_mt QMARK SLASH  &u_mt RSHIFT EQUAL
-                                                    &u_sgui_capw   &u_lt 4 SPACE  &u_ssh_capw                 &u_lt 3 RET               &u_lt 2 BSPC  &to 2
+&u_mt ESC GRAVE       &u_mt LC(C) Q  &u_lt 6 W      &kp E               &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O           &kp P              &kp BACKSPACE
+&u_mt LCTRL TAB       &kp A          &kp S          &u_mt LALT D        &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L           &u_mt AMPS SQT     &u_mt RCTRL MINUS
+&u_lt 5 C_PLAY_PAUSE  &u_mt LG(Z) Z  &u_mt LG(X) X  &u_mt LG(C) C       &u_mt LG(V) V  &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &u_lt 2 M     &lt 3 COMMA   &u_mt EXCL DOT  &u_mt QMARK SLASH  &u_mt RSHIFT EQUAL
+                                                    &u_sgui_prscn_clpb  &u_lt 4 SPACE  &u_ssh_cw_caps              &u_lt 3 RET               &u_lt 2 BSPC  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -26,7 +26,7 @@
             bindings = <
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W  &kp F         &kp P          &kp B                       &kp J                     &kp L         &u_lt 5 U      &kp Y           &kp SQT         &kp BACKSPACE
 &trans           &kp A          &kp R      &u_mt LALT S  &u_mt LGUI T   &kp G                       &kp M                     &u_mt RGUI N  &u_mt RALT E   &kp I           &u_mt AMPS O    &mt RCTRL MINUS
-&trans           &trans         &trans     &trans        &trans         &u_mt LS(LA(LC(LGUI))) V    &u_mt RS(RA(RC(RGUI))) K  &u_lt 2 H     &u_lt 3 COMMA  &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
+&trans           &trans         &trans     &trans        &u_mt LG(V) D  &u_mt LS(LA(LC(LGUI))) V    &u_mt RS(RA(RC(RGUI))) K  &u_lt 2 H     &u_lt 3 COMMA  &u_mt SEMI DOT  &mt EXCL SLASH  &u_mt RSHIFT EQUAL
                                            &sk LGUI      &u_lt 4 SPACE  &trans                      &u_lt 3 RET               &u_lt 2 BSPC  &to 2
             >;
 
@@ -491,12 +491,20 @@
             tapping-term-ms = <200>;
         };
 
-        u_sgui_capw: u_sgui_capw {
+        u_sgui_prscn_clpb: u_sgui_prscn_clpb {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&u_skq LGUI>, <&u_caps_word>;
+            bindings = <&u_skq LGUI>, <&kp LG(LS(LC(N4)))>;
 
             tapping-term-ms = <200>;
+        };
+
+        u_ssh_cw_caps: u_ssh_cw_caps {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&u_ssh_capw>, <&kp CAPS>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 };
