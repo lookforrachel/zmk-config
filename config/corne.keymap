@@ -60,10 +60,10 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&kp LGUI  &bootloader  &none             &kp LA(LS(UP))    &none              &none            &none     &none     &kp UP    &none      &kp LA(LG(LEFT))  &kp BACKSPACE
-&trans    &none        &kp LA(LS(LEFT))  &kp LA(LS(DOWN))  &kp LA(LS(RIGHT))  &kp PAGE_UP      &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &none             &u_mt RG(RALT) RG(RA(ENTER))
-&to 5     &kp LSHIFT   &kp LCTRL         &kp LALT          &kp LGUI           &kp PAGE_DOWN    &kp END   &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT        &u_caps_word
-                                         &kp END           &none              &none            &kp RET   &to 0     &trans
+&kp LGUI  &bootloader                       &none             &kp LS(UP)    &none              &none            &none     &none     &kp UP    &none      &kp LA(LG(LEFT))  &kp BACKSPACE
+&trans    &u_mt LG(LEFT_ALT) LG(LA(ENTER))  &kp LA(LS(LEFT))  &kp LS(DOWN)  &kp LA(LS(RIGHT))  &kp PAGE_UP      &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &none             &u_mt RG(RALT) RG(RA(ENTER))
+&to 5     &kp LSHIFT                        &kp LCTRL         &kp LALT      &kp LGUI           &kp PAGE_DOWN    &kp END   &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT        &u_caps_word
+                                                              &kp END       &none              &none            &kp RET   &to 0     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
