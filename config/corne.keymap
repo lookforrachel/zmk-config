@@ -15,7 +15,7 @@
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W      &kp E               &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O        &kp P        &kp BSPC
 &u_mt LCTRL TAB  &kp A          &kp S          &u_mt LALT D        &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L        &u_amps_qts  &u_mt RCTRL MINUS
 &u_lt 2 HASH     &u_mt LG(Z) Z  &u_mt LG(X) X  &u_mt LG(C) C       &u_mt LG(V) V  &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &kp M         &lt 3 COMMA   &u_dot_excl  &kp SLASH    &u_mt RSHIFT EQUAL
-                                               &u_sgui_prscn_clpb  &u_lt 4 SPACE  &u_ssh_cw_caps              &u_lt 3 RET               &u_lt 2 BSPC  &kp C_PP
+                                               &u_sgui_prscn_clpb  &u_lt 4 SPACE  &u_ssh_capw                 &u_lt 3 RET               &u_lt 2 BSPC  &kp C_PP
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -476,7 +476,7 @@
         u_ssh_capw: u_sticky_shift_capw {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&u_skq LSHFT>, <&u_caps_word>;
+            bindings = <&u_skq LSHFT>, <&caps_word>;
 
             tapping-term-ms = <200>;
         };
