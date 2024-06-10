@@ -15,7 +15,7 @@
 &u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W      &kp E               &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O    &kp P          &kp BSPC
 &u_mt LCTRL TAB  &kp A          &kp S          &u_mt LALT D        &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L    &u_amps_qts    &u_mt RCTRL MINUS
 &u_lt 2 HASH     &u_mt LG(Z) Z  &u_mt LG(X) X  &u_mt LG(C) C       &u_mt LG(V) V  &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &kp M         &lt 3 COMMA   &kp DOT  &u_slash_excl  &u_mt RSHIFT EQUAL
-                                               &u_sgui_prscn_clpb  &u_lt 4 SPACE  &u_ssh_capw                 &u_lt 3 RET               &u_lt 2 BSPC  &kp C_PP
+                                               &u_sgui_prscn_clpb  &u_lt 4 SPACE  &u_ssh_capw                 &u_lt 3 DEL               &u_lt 2 BSPC  &kp C_PP
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -38,7 +38,7 @@
             bindings = <
 &kp LGUI    &kp LBKT   &kp N7  &kp N8  &kp N9     &kp RBKT     &kp LPAR  &kp RPAR  &kp UP    &none      &bootloader  &kp DEL
 &caps_word  &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHFT    &kp RCTRL
-&to 3       &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &to 4     &to 5     &to 6     &kp DOT    &trans       &trans
+&to 3       &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &kp RET   &to 5     &to 6     &kp DOT    &kp RET      &trans
                                &kp N0  &kp SPACE  &kp MINUS    &kp RET   &to 0     &trans
             >;
 
