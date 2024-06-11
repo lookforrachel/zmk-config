@@ -38,7 +38,7 @@
             bindings = <
 &kp LGUI    &kp LBKT   &kp N7  &kp N8  &kp N9     &kp RBKT     &kp LPAR  &kp RPAR  &kp UP    &none      &bootloader  &kp DEL
 &caps_word  &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHFT    &kp RCTRL
-&to 3       &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &kp RET   &to 5     &to 6     &kp DOT    &kp RET      &trans
+&to 3       &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &to 4     &to 5     &to 6     &kp DOT    &kp RET      &trans
                                &kp N0  &kp SPACE  &kp MINUS    &kp RET   &to 0     &trans
             >;
 
@@ -50,7 +50,7 @@
             bindings = <
 &kp LGUI  &kp BSLH   &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR     &u_macro_sq_bkt  &kp LBKT  &kp C         &kp RBKT  &bootloader  &kp DEL
 &kp CAPS  &kp COLON  &kp DLLR  &kp PRCNT     &kp CARET     &kp PLUS     &u_macro_c_bkt   &kp LBRC  &u_macro_grv  &kp RBRC  &kp DQT      &kp RCTRL
-&to 4     &kp TILDE  &kp EXCL  &kp AT        &kp HASH      &kp PIPE     &u_macro_bkt     &kp LPAR  &kp SEMI      &kp RPAR  &kp QMARK    &trans
+&to 4     &kp TILDE  &kp EXCL  &kp AT        &kp HASH      &kp PIPE     &kp RET          &kp LPAR  &u_macro_bkt  &kp RPAR  &kp QMARK    &trans
                                &u_macro_sqt  &u_macro_dqt  &kp UNDER    &kp RET          &to 0     &trans
             >;
 
