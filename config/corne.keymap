@@ -138,8 +138,8 @@
         };
 
         u_combo_to_sym {
-            bindings = <&to 3>;
-            key-positions = <4 5>;
+            bindings = <&to 4>;
+            key-positions = <19 20>;
         };
     };
 
