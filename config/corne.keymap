@@ -12,10 +12,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&u_mt ESC GRAVE  &u_mt LC(C) Q  &u_lt 6 W      &kp E               &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O    &kp P          &kp BSPC
-&u_mt LCTRL TAB  &kp A          &kp S          &u_mt LALT D        &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L    &u_amps_qts    &u_mt RCTRL MINUS
-&u_lt 2 HASH     &u_mt LG(Z) Z  &u_mt LG(X) X  &u_mt LG(C) C       &u_mt LG(V) V  &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &kp M         &lt 4 COMMA   &kp DOT  &u_slash_excl  &u_mt RSHIFT EQUAL
-                                               &u_sgui_prscn_clpb  &u_lt 4 SPACE  &u_skq LSHIFT               &u_lt 3 DEL               &u_lt 2 BSPC  &kp C_PP
+&u_mt ESC GRAVE   &u_mt LC(C) Q  &u_lt 6 W      &kp E               &kp R          &kp T                       &kp Y                     &kp U         &u_lt 5 I     &kp O    &kp P          &kp BSPC
+&u_mt LCTRL CAPS  &kp A          &kp S          &u_mt LALT D        &u_mt LGUI F   &kp G                       &kp H                     &u_mt RGUI J  &u_mt RALT K  &kp L    &u_amps_qts    &u_mt RCTRL MINUS
+&u_lt 2 HASH      &u_mt LG(Z) Z  &u_mt LG(X) X  &u_mt LG(C) C       &u_mt LG(V) V  &u_mt LS(LA(LC(LGUI))) B    &u_mt RS(RA(RC(RGUI))) N  &kp M         &lt 4 COMMA   &kp DOT  &u_slash_excl  &u_mt RSHIFT EQUAL
+                                                &u_sgui_prscn_clpb  &u_lt 4 SPACE  &u_skq LSHIFT               &u_lt 3 DEL               &u_lt 2 BSPC  &kp C_PP
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -37,7 +37,7 @@
             display-name = "Num";
             bindings = <
 &kp LGUI      &kp LBKT   &kp N7  &kp N8  &kp N9     &kp RBKT     &kp LPAR    &kp RPAR   &kp UP    &none      &bootloader  &kp DEL
-&caps_word    &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS    &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT    &kp RCTRL
+&u_caps_word  &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp PLUS    &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT    &kp RCTRL
 &kp LEFT_ALT  &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp SLASH    &caps_word  &kp MINUS  &kp AMPS  &kp DOT    &kp EXCL     &trans
                                  &kp N0  &kp SPACE  &kp DOT      &kp RET     &to 0      &trans
             >;
@@ -49,7 +49,7 @@
             display-name = "Sym";
             bindings = <
 &kp LGUI  &kp BSLH   &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR     &u_macro_sq_bkt  &kp LBKT  &kp C         &kp RBKT  &bootloader  &kp DEL
-&kp CAPS  &kp COLON  &kp DLLR  &kp PRCNT     &kp CARET     &kp PLUS     &u_macro_c_bkt   &kp LBRC  &u_macro_grv  &kp RBRC  &kp DQT      &kp RCTRL
+&kp TAB   &kp COLON  &kp DLLR  &kp PRCNT     &kp CARET     &kp PLUS     &u_macro_c_bkt   &kp LBRC  &u_macro_grv  &kp RBRC  &kp DQT      &kp RCTRL
 &to 4     &kp TILDE  &kp EXCL  &kp AT        &kp HASH      &kp PIPE     &kp RET          &kp LPAR  &u_macro_bkt  &kp RPAR  &kp QMARK    &trans
                                &u_macro_sqt  &u_macro_dqt  &kp UNDER    &kp RET          &to 0     &trans
             >;
