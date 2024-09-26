@@ -62,7 +62,7 @@
             bindings = <
 &kp LGUI  &bootloader                       &none             &kp LS(UP)    &none              &none            &none     &none     &kp UP    &none      &kp LA(LG(LEFT))  &kp BACKSPACE
 &trans    &u_mt LG(LEFT_ALT) LG(LA(ENTER))  &kp LA(LS(LEFT))  &kp LS(DOWN)  &kp LA(LS(RIGHT))  &kp PAGE_UP      &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &none             &u_mt RG(RALT) RG(RA(ENTER))
-&to 5     &kp LSHIFT                        &kp LCTRL         &kp LALT      &kp LGUI           &kp PAGE_DOWN    &kp END   &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT        &u_caps_word
+&to 5     &kp LSHIFT                        &kp LCTRL         &kp LALT      &u_macro_spc_bspc  &kp PAGE_DOWN    &kp END   &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHIFT        &u_caps_word
                                                               &kp END       &none              &kp LSHIFT       &kp RET   &to 0     &trans
             >;
 
@@ -307,6 +307,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(C) &kp LG(F) &kp LG(V)>;
+        };
+
+        u_macro_spc_bspc: u_space_bkspc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp BSPC>;
+            label = "U_SPACE_BKSPC";
         };
     };
 
