@@ -127,19 +127,9 @@
             key-positions = <1 10>;
         };
 
-        u_combo_to_num {
-            bindings = <&to 2>;
-            key-positions = <28 29>;
-        };
-
         u_combo_search_selected {
             bindings = <&u_macro_search_selected>;
             key-positions = <16 17>;
-        };
-
-        u_combo_to_sym {
-            bindings = <&to 4>;
-            key-positions = <19 20>;
         };
     };
 
